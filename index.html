@@ -28,10 +28,17 @@
             <a href="https://medium.com/@suelidahoramoreira" target="_blank" title="Medium">
                 <i class="fab fa-medium"></i>
             </a>
+            <a href="https://wa.me/5511992077787" target="_blank" title="WhatsApp">
+                <i class="fab fa-whatsapp"></i>
+            </a>
             <a href="mailto:s.horamoreira@gmail.com" title="Email">
                 <i class="fas fa-envelope"></i>
             </a>
         </nav>
+        <div class="language-selector">
+            <button class="btn btn-language active" onclick="changeLanguage('pt')">PT</button>
+            <button class="btn btn-language" onclick="changeLanguage('en')">EN</button>
+        </div>
     </header>
 
     <main>
@@ -54,18 +61,68 @@
             </div>
         </section>
 
-        <!-- Rest of the HTML remains exactly the same -->
         <section class="about">
             <h2>Sobre mim</h2>
             <p>Meu nome é Sueli da Hora Moreira. Sou formada em Processamento de dados e Sistemas de Informação, atualmente trabalho como Analista Financeiro, com experiência nas áreas de Tesouraria e Contas à Pagar.</p>
             <p>Análise e controle de pagamentos, empréstimos e aplicações, fechamento, fluxo de caixa e fluxo de pagamentos, desenvolvendo dashboards para acompanhamento das volumetrias de pagamentos, devoluções e repasses a clientes, utilizando as ferramentas Power BI e Excel.</p>
-            <p>Desenvolvimento de plataforma para o processo de chamados de solicitação e pagamento de Câmbios e impostos agregados desenvolvidos por mim utilizando as ferramentas Power Plataform, Sharepoint Sites, Power Automate, Power BI e Power Apps.</p>
+            <p>Desenvolvimento de plataforma para o processo de chamados de solicitação e pagamento de Câmbios e impostos agregados desenvolvidos por mim utilizando as ferramentas Power Platform, SharePoint Sites, Power Automate, Power BI e Power Apps.</p>
             <p>Treinamento da equipe financeira na ferramenta Excel para análise de dados. Estou buscando uma oportunidade de trabalhar profissionalmente como Cientista de Dados para melhorar a tomada de decisão da empresa, através da construção de soluções usando dados.</p>
+        </section>
+
+        <section class="experience">
+            <h2>Experiência Profissional</h2>
+            <div class="experience-grid">
+                <div class="experience-card">
+                    <h3>Analista de dados & IA - Voluntária</h3>
+                    <p class="company">Pymentech Solutions</p>
+                    <p class="period">Jul 2024 - Presente</p>
+                </div>
+                <div class="experience-card">
+                    <h3>Analista Financeiro Pleno</h3>
+                    <p class="company">FTD Educação</p>
+                    <p class="period">Jan 2016 - Jun 2024</p>
+                    <p class="location">São Paulo, Brasil · Híbrida</p>
+                </div>
+                <div class="experience-card">
+                    <h3>Analista Financeiro Sênior</h3>
+                    <p class="company">Insper</p>
+                    <p class="period">Set 2009 - Nov 2011</p>
+                    <p class="location">São Paulo, Brasil · Presencial</p>
+                </div>
+                <div class="experience-card">
+                    <h3>Analista Financeiro Pleno</h3>
+                    <p class="company">Grupo Marista</p>
+                    <p class="period">Mar 1998 - Out 2007</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="projects">
+            <h2>Projetos</h2>
+            <div class="projects-grid">
+                <div class="project-category">
+                    <h3>Projetos em IA</h3>
+                    <div class="project-cards">
+                        <!-- Add your AI projects here -->
+                    </div>
+                </div>
+                <div class="project-category">
+                    <h3>Projetos Python</h3>
+                    <div class="project-cards">
+                        <!-- Add your Python projects here -->
+                    </div>
+                </div>
+                <div class="project-category">
+                    <h3>Projetos de Dados</h3>
+                    <div class="project-cards">
+                        <!-- Add your Data projects here -->
+                    </div>
+                </div>
+            </div>
         </section>
 
         <section class="skills">
             <h2>Habilidades</h2>
-            
             <div class="skills-grid">
                 <div class="skill-category">
                     <h3><i class="fas fa-code"></i> Linguagens de Programação e Banco de Dados</h3>
@@ -73,6 +130,7 @@
                         <li>Python com foco em análise de dados</li>
                         <li>Web scraping com Python</li>
                         <li>SQL para extração de dados</li>
+                        <li>R para modelagem estatística</li>
                         <li>Orange Canvas</li>
                     </ul>
                 </div>
@@ -80,8 +138,8 @@
                 <div class="skill-category">
                     <h3><i class="fas fa-chart-bar"></i> Visualização de Dados</h3>
                     <ul>
-                        <li>Seaborn</li>
-                        <li>Power BI e Looker</li>
+                        <li>Seaborn, Plotly e Bokeh</li>
+                        <li>Power BI, Tableau, Metabase e Looker</li>
                     </ul>
                 </div>
 
@@ -89,18 +147,19 @@
                     <h3><i class="fas fa-brain"></i> Estatística e Machine Learning</h3>
                     <ul>
                         <li>Estatística descritiva</li>
-                        <li>Análise gráfica da dispersão de dados </li>
+                        <li>Algoritmos de Regressão, classificação, clusterização e "learn to rank"</li>
+                        <li>Técnicas de balanceamento dos dados</li>
                         <li>Métricas de performance dos algoritmos</li>
-                        <li>Pacotes de Machine Learning: Scipy</li>
+                        <li>Pacotes de Machine Learning: Sklearn e Scipy</li>
                     </ul>
                 </div>
 
                 <div class="skill-category">
                     <h3><i class="fas fa-laptop-code"></i> Engenharia de Software</h3>
                     <ul>
-                        <li>Git, Github, Docker</li>
+                        <li>Git, Github, Gitlab, Cookiecutter, Virtual Environment e Docker</li>
                         <li>Streamlit, Flask, Python API's</li>
-                        <li>AWS Amazon, Google Cloud Platform (GCP) e Azure</li>
+                        <li>Cloud Heroku, AWS Amazon, Google Cloud Platform (GCP) e Azure</li>
                     </ul>
                 </div>
 
@@ -108,6 +167,16 @@
                     <h3><i class="fas fa-robot"></i> Inteligência Artificial</h3>
                     <ul>
                         <li>CrewAI, APIs, Engenharia de Prompts</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <h3><i class="fas fa-tasks"></i> Métodos Ágeis</h3>
+                    <ul>
+                        <li>Kanban</li>
+                        <li>Scrum</li>
+                        <li>Notion</li>
+                        <li>Trello</li>
                     </ul>
                 </div>
             </div>
@@ -120,8 +189,11 @@
             <div class="contact-info">
                 <a href="mailto:s.horamoreira@gmail.com"><i class="fas fa-envelope"></i> s.horamoreira@gmail.com</a>
                 <a href="tel:+5511992077787"><i class="fas fa-phone"></i> (11) 99207-7787</a>
+                <a href="https://wa.me/5511992077787"><i class="fab fa-whatsapp"></i> WhatsApp</a>
             </div>
         </div>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
