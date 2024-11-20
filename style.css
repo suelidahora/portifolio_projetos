@@ -21,6 +21,30 @@ body {
     background-color: var(--background-color);
 }
 
+.education-card {
+    background: white;
+    border-radius: 15px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 15px var(--shadow-color);
+    margin-bottom: 2rem; /* Ajuste o espaçamento entre cartões */
+}
+
+.education-card .course {
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.education-card .institution {
+    font-style: italic;
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+}
+
+.education-card .period {
+    color: var(--text-color);
+}
+
 header {
     background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
     padding: 1rem 0;
