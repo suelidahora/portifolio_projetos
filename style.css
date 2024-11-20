@@ -276,18 +276,25 @@ h2 {
     border-radius: 15px;
     padding: 1.5rem;
     box-shadow: 0 4px 15px var(--shadow-color);
+    text-align: center;
 }
 
 .project-category h3 {
-    color: var(--primary-color);
+    color: var(--primary-color); /* Cor roxa */
     margin-bottom: 1.5rem;
     font-size: 1.3em;
-    text-align: center;
 }
 
 .project-cards {
     display: grid;
     gap: 1.5rem;
+    color: var(--text-color);
+}
+
+.project-cards p {
+    color: var(--secondary-color); /* Cor rosa para os nomes dos projetos */
+    font-weight: 600;
+    margin-bottom: 0.5rem;
 }
 
 .skills-grid {
