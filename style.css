@@ -21,18 +21,22 @@ body {
     background-color: var(--background-color);
 }
 
-.education {
+section {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 2rem;
+    padding: 3rem;
+    background-color: var(--section-bg);
+    border-radius: 20px;
+    box-shadow: 0 4px 20px var(--shadow-color);
+    margin-bottom: 4rem; /* Espaço entre cada seção */
 }
 
-.education h2 {
+h2 {
     color: var(--primary-color);
     margin-bottom: 2rem;
-    font-size: 2em;
-    border-bottom: 3px solid var(--secondary-color);
     padding-bottom: 0.5rem;
+    border-bottom: 3px solid var(--secondary-color);
+    font-size: 2em;
 }
 
 .education-card {
