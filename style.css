@@ -21,11 +21,38 @@ body {
     background-color: var(--background-color);
 }
 
+.education {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.education h2 {
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+    font-size: 2em;
+    border-bottom: 3px solid var(--secondary-color);
+    padding-bottom: 0.5rem;
+}
+
+.education-card {
+    background: white;
+    border-radius: 15px;
+    padding: 1.5rem;
+    margin-bottom: 2rem; /* Espaço entre os cards */
+    box-shadow: 0 4px 15px var(--shadow-color);
+    transition: transform 0.3s ease;
+}
+
+.education-card:hover {
+    transform: translateY(-5px);
+}
+
 .education-card .course {
     color: var(--primary-color);
     font-weight: bold;
     margin-bottom: 0.5rem;
-    font-size: 1.2em; /* Ajusta o tamanho da fonte */
+    font-size: 1.2em;
 }
 
 .education-card .institution {
@@ -33,7 +60,6 @@ body {
     font-style: italic;
     font-weight: 600;
     margin-bottom: 0.5rem;
-    font-size: 1em; /* Ajusta o tamanho da fonte */
 }
 
 .education-card .period {
