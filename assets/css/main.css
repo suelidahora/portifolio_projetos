@@ -2271,3 +2271,66 @@ button,
     border-top: 0;
     margin-top: 0;
     padding-top: 0; }
+/* --- ESTILOS PARA OS CARDS DE PROJETO --- */
+
+.projects-grid .project-card {
+    background-color: #fff;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; /* Garante que a imagem arredondada não 'vaze' do card */
+    transition: transform 0.2s;
+}
+
+.projects-grid .project-card:hover {
+    transform: translateY(-5px); /* Efeito de 'flutuar' ao passar o mouse */
+}
+
+/* AQUI ESTÁ A CORREÇÃO PRINCIPAL PARA AS IMAGENS */
+.projects-grid .project-card img {
+    width: 100%; /* Faz a imagem ocupar toda a largura do card */
+    height: 200px; /* Define uma altura FIXA para todas as imagens */
+    object-fit: cover; /* Garante que a imagem cubra a área sem distorcer */
+}
+
+.project-card h3 {
+    padding: 0 20px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: #337ab7;
+}
+
+.project-card p {
+    padding: 0 20px;
+    font-size: 0.9em;
+    line-height: 1.6;
+    flex-grow: 1; /* Faz o parágrafo crescer e ocupar o espaço disponível */
+}
+
+.project-links {
+    padding: 20px;
+    margin-top: auto; /* Empurra os links para o final do card, alinhando todos */
+    border-top: 1px solid #f0f0f0;
+    text-align: center;
+}
+
+.btn-project {
+    display: inline-block;
+    padding: 8px 18px;
+    margin: 5px;
+    border-radius: 5px;
+    text-decoration: none;
+    background-color: #f0f0f0;
+    color: #333;
+    border: 1px solid #ccc;
+    font-weight: bold;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.btn-project:hover {
+    background-color: #007bff;
+    color: #fff;
+    border-color: #007bff;
+}
