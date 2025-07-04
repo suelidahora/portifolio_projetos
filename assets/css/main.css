@@ -1,83 +1,88 @@
-@import url(fontawesome-all.min.css);
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600,400italic,600italic|Roboto+Slab:400,700");
-
 /*
 	Editorial by HTML5 UP
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
-html, body, div, span, applet, object,
-iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
-pre, a, abbr, acronym, address, big, cite,
-code, del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var, b,
-u, i, center, dl, dt, dd, ol, ul, li, fieldset,
-form, label, legend, table, caption, tbody,
-tfoot, thead, tr, th, td, article, aside,
-canvas, details, embed, figure, figcaption,
-footer, header, hgroup, menu, nav, output, ruby,
-section, summary, time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline; 
-}
 
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-  display: block; 
-}
+@import url("fontawesome-all.min.css");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600,400italic,600italic|Roboto+Slab:400,700");
 
-body {
-  line-height: 1; 
-}
+/* Reset */
 
-ol, ul {
-  list-style: none; 
-}
+	html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+		margin: 0;
+		padding: 0;
+		border: 0;
+		font-size: 100%;
+		font: inherit;
+		vertical-align: baseline;
+	}
 
-blockquote, q {
-  quotes: none; 
-}
-  blockquote:before, blockquote:after, q:before, q:after {
-    content: '';
-    content: none; 
-}
+	article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+		display: block;
+	}
 
-table {
-  border-collapse: collapse;
-  border-spacing: 0; 
-}
+	body {
+		line-height: 1;
+	}
 
-body {
-  -webkit-text-size-adjust: none; 
-}
+	ol, ul {
+		list-style: none;
+	}
 
-mark {
-  background-color: transparent;
-  color: inherit; 
-}
+	blockquote, q {
+		quotes: none;
+	}
 
-input::-moz-focus-inner {
-  border: 0;
-  padding: 0; 
-}
+		blockquote:before, blockquote:after, q:before, q:after {
+			content: '';
+			content: none;
+		}
 
-input, select, textarea {
-  -moz-appearance: none;
-  -webkit-appearance: none;
-  -ms-appearance: none;
-  appearance: none; 
-}
+	table {
+		border-collapse: collapse;
+		border-spacing: 0;
+	}
 
-/* ... (TODO O CÓDIGO ORIGINAL DO SEU TEMPLATE VAI AQUI, EU O REMOVI PARA A RESPOSTA NÃO FICAR GIGANTE, MAS VOCÊ DEVE MANTER O SEU) ... */
-/* Apenas garanta que o bloco de reset acima tenha o font-size: 100%; */
+	body {
+		-webkit-text-size-adjust: none;
+	}
+
+/* Box Model */
+
+	*, *:before, *:after {
+		box-sizing: border-box;
+	}
+
+/* Basic */
+
+	@-ms-viewport {
+		width: device-width;
+	}
+
+	body {
+		-ms-overflow-style: scrollbar;
+	}
+
+	@media screen and (max-width: 480px) {
+
+		html, body {
+			min-width: 320px;
+		}
+
+	}
+
+	body.is-preload *, body.is-preload *:before, body.is-preload *:after {
+		animation: none !important;
+		transition: none !important;
+	}
+
+/* Outros estilos do template original... */
+/* ... (todo o resto do código original do template deve estar aqui) ... */
+/* Apenas omiti para a resposta não ficar gigantesca, mas ele deve estar no seu arquivo final */
 
 
 /* --- NOVOS ESTILOS DEFINITIVOS PARA OS PROJETOS --- */
-/* Cole esta parte no FINAL do seu arquivo main.css */
 
 #featured-projects {
     padding: 40px 20px; /* Adicionado padding horizontal para telas menores */
@@ -118,27 +123,4 @@ input, select, textarea {
 .project-card img {
     width: 100%;
     height: 200px;
-    object-fit: cover;
-}
-
-.card-content {
-    padding: 25px;
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1; /* Faz este container crescer */
-}
-
-.card-content h3 {
-    margin-top: 0;
-    color: #3d4449;
-    font-size: 1.4em;
-}
-
-.card-content p {
-    font-size: 0.95em;
-    line-height: 1.6;
-    flex-grow: 1; /* Faz o parágrafo ocupar o espaço */
-    color: #7f888f;
-}
-
-.card-
+    object-fit:
