@@ -3,67 +3,129 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sueli Hora - Analista de Dados</title>
-    <link rel="stylesheet" href="assets/css/main.css">
+    <title>Sueli Hora - Analista de Dados & BI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Teko:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        /* CSS Reset e Estilos Gerais */
+        :root {
+            --cor-primaria: #8e44ad;
+            --cor-secundaria: #e23b81;
+            --cor-texto: #333;
+            --cor-fundo: #f4f7f6;
+            --sombra: 0 5px 20px rgba(0,0,0,0.08);
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Roboto', sans-serif; background-color: var(--cor-fundo); color: var(--cor-texto); line-height: 1.7; }
+        .container { max-width: 1100px; margin: 0 auto; padding: 20px; }
+
+        /* Header */
+        header { padding: 20px 0; text-align: center; }
+        .social-links a { font-size: 1.8em; color: var(--cor-primaria); margin: 0 15px; text-decoration: none; transition: color 0.3s; }
+        .social-links a:hover { color: var(--cor-secundaria); }
+
+        /* Hero Section */
+        .hero { display: flex; align-items: center; justify-content: center; gap: 50px; padding: 40px 0; flex-wrap: wrap; }
+        .profile-image { width: 220px; height: 220px; border-radius: 50%; object-fit: cover; border: 8px solid #fff; box-shadow: var(--sombra); }
+        .welcome-text { max-width: 600px; text-align: center; }
+        .welcome-text h1 { font-family: 'Teko', sans-serif; font-size: 4.5em; line-height: 1; color: var(--cor-primaria); margin: 0; }
+        .welcome-text h2 { font-family: 'Teko', sans-serif; font-size: 2.5em; line-height: 1; color: var(--cor-secundaria); margin-bottom: 20px; }
+        .welcome-text p { font-size: 1.1em; margin-bottom: 30px; }
+        .btn { display: inline-block; padding: 12px 30px; margin: 5px; border-radius: 50px; text-decoration: none; font-weight: bold; transition: all 0.3s; border: 2px solid var(--cor-primaria); }
+        .btn-primary { background-color: var(--cor-primaria); color: #fff; } .btn-primary:hover { background-color: var(--cor-secundaria); border-color: var(--cor-secundaria); }
+        .btn-secondary { color: var(--cor-primaria); } .btn-secondary:hover { background-color: var(--cor-primaria); color: #fff; }
+
+        /* Seções */
+        section { padding: 60px 0; }
+        section h2 { font-family: 'Teko', sans-serif; font-size: 3em; text-align: center; margin-bottom: 50px; color: var(--cor-primaria); }
+        
+        /* Projetos */
+        .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
+        .project-card { background-color: #fff; border-radius: 10px; box-shadow: var(--sombra); display: flex; flex-direction: column; overflow: hidden; transition: transform 0.3s, box-shadow 0.3s; }
+        .project-card:hover { transform: translateY(-10px); box-shadow: 0 10px 25px rgba(0,0,0,0.12); }
+        .project-card img { width: 100%; height: 200px; object-fit: cover; }
+        .card-content { padding: 25px; display: flex; flex-direction: column; flex-grow: 1; }
+        .card-content h3 { font-family: 'Teko', sans-serif; font-size: 1.8em; margin: 0 0 15px 0; }
+        .card-content p { font-size: 1em; flex-grow: 1; margin-bottom: 1em; }
+        .project-links { margin-top: auto; padding-top: 15px; border-top: 1px solid #f0f0f0; text-align: center; }
+        .btn-project { display: inline-block; padding: 8px 18px; margin: 5px; border-radius: 5px; text-decoration: none; background-color: #eee; color: #333; font-weight: bold; border: 1px solid #ddd; transition: background-color 0.2s; }
+        .btn-project:hover { background-color: var(--cor-secundaria); color: #fff !important; border-color: var(--cor-secundaria); }
+
+        /* Footer */
+        footer { text-align: center; padding: 40px 20px; margin-top: 40px; background: #333; color: #fff; }
+    </style>
 </head>
 <body>
+
     <header>
-        <nav class="social-links">
+        <div class="social-links">
             <a href="https://linkedin.com/in/sueli-da-hora/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-            <a href="https://github.com/suelidahora" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://github.com/SueliHora" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
             <a href="mailto:s.horamoreira@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
-        </nav>
-        <div class="language-selector">
-            <button class="btn btn-language active" onclick="location.href='index.html'">PT</button>
-            <button class="btn btn-language" onclick="location.href='index_en.html'">EN</button>
         </div>
     </header>
-    
-    <main>
+
+    <main class="container">
         <section class="hero">
             <div class="profile-container">
                 <img src="https://raw.githubusercontent.com/suelidahora/portifolio_projetos/main/FotoSu2.jpg" alt="Sueli da Hora" class="profile-image">
                 <div class="welcome-text">
-                    <h1>Sueli Da Hora Moreira</h1>
-                    <h2>Analista de Dados &amp; Business Intelligence</h2>
-                    <p>Recém-formada no MBA em Engenharia de Dados e IA pela PUCRS, sou uma profissional apaixonada por transformar dados em decisões de negócio estratégicas.</p>
-                    <p>Meu foco é atuar no ciclo completo da análise de dados: da extração e limpeza (ETL) à criação de dashboards e visualizações que contam uma história e revelam os insights escondidos nos números.</p>
+                    <h1>SUELI HORA</h1>
+                    <h2>ANALISTA DE DADOS & BUSINESS INTELLIGENCE</h2>
+                    <p>Recém-formada no MBA em Engenharia de Dados e IA pela PUCRS, sou uma profissional apaixonada por transformar dados em decisões de negócio estratégicas e gerar valor através de automação e insights.</p>
                     <div class="cta-buttons">
-                        <a href="https://raw.githubusercontent.com/suelidahora/portifolio_projetos/main/CV-PT-BR.pdf" class="btn btn-primary" target="_blank"><i class="fas fa-download"></i> Baixar CV</a>
-                        <a href="mailto:s.horamoreira@gmail.com" class="btn btn-secondary"><i class="fas fa-envelope"></i> Contato</a>
+                        <a href="https://raw.githubusercontent.com/suelidahora/portifolio_projetos/main/CV-PT-BR.pdf" class="btn btn-primary" target="_blank">Download CV</a>
+                        <a href="mailto:s.horamoreira@gmail.com" class="btn btn-secondary">Contato</a>
                     </div>
                 </div>
             </div>
         </section>
 
         <section id="featured-projects">
-            <div class="section-title-wrapper"><h2>Projetos de Destaque</h2></div>
+            <h2>Projetos de Destaque</h2>
             <div class="projects-grid">
+                <div class="project-card">
+                    <img src="https://raw.githubusercontent.com/suelidahora/portifolio_projetos/main/images/An%C3%A1lise%20de%20Evas%C3%A3o%20(Telecom%20X).png" alt="Análise de Evasão">
+                    <div class="card-content">
+                        <h3>Análise de Evasão de Clientes</h3>
+                        <p>Análise exploratória para identificar os fatores do churn em uma empresa de telecom, guiando ações de retenção.</p>
+                        <p><strong>Ferramentas:</strong> Python, Pandas, Seaborn</p>
+                        <div class="project-links">
+                            <a href="https://github.com/SueliHora/challenge2-Desafio_Telecom_X" class="btn-project" target="_blank">Ver no GitHub</a>
+                        </div>
+                    </div>
                 </div>
-        </section>
-
-        <section id="featured-skills">
-            <div class="section-title-wrapper"><h2>Principais Habilidades</h2></div>
-            <div class="skills-grid">
+                <div class="project-card">
+                    <img src="https://raw.githubusercontent.com/suelidahora/portifolio_projetos/main/images/An%C3%A1lise%20de%20Desempenho%20de%20Lojas.png" alt="Análise de Lojas">
+                    <div class="card-content">
+                        <h3>Análise de Desempenho de Lojas</h3>
+                        <p>Análise comparativa para fornecer uma recomendação estratégica sobre qual de quatro lojas deveria ser vendida.</p>
+                        <p><strong>Ferramentas:</strong> Python, Pandas, Matplotlib</p>
+                        <div class="project-links">
+                            <a href="https://github.com/SueliHora/Challege-Data-Science-Latam" class="btn-project" target="_blank">Ver no GitHub</a>
+                        </div>
+                    </div>
                 </div>
-        </section>
-
-        <section id="featured-experience">
-            <div class="section-title-wrapper"><h2>Experiência Profissional</h2></div>
-            <div class="experience-grid">
+                <div class="project-card">
+                    <img src="https://raw.githubusercontent.com/suelidahora/portifolio_projetos/main/images/Amigo%20Secreto.png" alt="App Amigo Secreto">
+                    <div class="card-content">
+                        <h3>App de Sorteio de Amigo Secreto</h3>
+                        <p>Aplicação web interativa (HTML, CSS, JS) para organizar sorteios, com validação de dados e foco em UX.</p>
+                        <p><strong>Ferramentas:</strong> HTML, CSS, JavaScript</p>
+                        <div class="project-links">
+                            <a href="https://github.com/SueliHora/Challenge-Amigo-Secreto" class="btn-project" target="_blank">Ver no GitHub</a>
+                        </div>
+                    </div>
                 </div>
-        </section>
-        
-        <section id="featured-education">
-            <div class="section-title-wrapper"><h2>Formação de Destaque</h2></div>
-            <div class="education-card">
-                </div>
+            </div>
         </section>
     </main>
 
     <footer>
         <p>© 2025 Sueli Da Hora Moreira</p>
     </footer>
+
 </body>
 </html>
