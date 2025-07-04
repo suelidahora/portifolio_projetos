@@ -1,169 +1,41 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sueli Hora - Data Analyst & BI</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-</head>
-<body>
-    <header>
-        <nav class="social-links">
-            <a href="https://linkedin.com/in/sueli-da-hora/" target="_blank" title="LinkedIn">
-                <i class="fab fa-linkedin"></i>
-            </a>
-            <a href="https://github.com/SueliHora" target="_blank" title="GitHub">
-                <i class="fab fa-github"></i>
-            </a>
-            <a href="mailto:s.horamoreira@gmail.com" title="Email">
-                <i class="fas fa-envelope"></i>
-            </a>
-        </nav>
-        <div class="language-selector">
-            <button class="btn btn-language" onclick="changeLanguage('pt')">PT</button>
-            <button class="btn btn-language active" onclick="changeLanguage('en')">EN</button>
-        </div>
-    </header>
-
-    <main>
-        <section class="hero">
-            <div class="profile-container">
-                <img src="https://raw.githubusercontent.com/suelidahora/portifolio_projetos/main/FotoSu2.jpg" alt="Sueli da Hora" class="profile-image">
-                <div class="welcome-text">
-                    <h1>Sueli Da Hora Moreira</h1>
-                    <h2>Data Analyst &amp; Business Intelligence</h2>
-                    <p>
-                        A recent graduate of the MBA in Data Engineering and AI from PUCRS, I am a professional passionate about transforming data into strategic business decisions.
-                    </p>
-                    <p>
-                        My focus is on the complete data analysis lifecycle: from extraction, cleaning, and processing (ETL) to creating dashboards and visualizations that tell a story and reveal the insights hidden in the numbers.
-                    </p>
-                    <div class="cta-buttons">
-                        <a href="https://github.com/suelidahora/portifolio_projetos/raw/main/CV-En.pdf" class="btn btn-primary" target="_blank">
-                            <i class="fas fa-download"></i> Download CV
-                        </a>
-                        <a href="mailto:s.horamoreira@gmail.com" class="btn btn-secondary">
-                            <i class="fas fa-envelope"></i> Contact by Email
-                        </a>
-                    </div>
+<section id="featured-projects" class="projects">
+    <h2>Featured Projects</h2>
+    <div class="projects-grid">
+        <div class="project-card">
+            <img src="https://raw.githubusercontent.com/suelidahora/portifolio_projetos/main/images/An%C3%A1lise%20de%20Evas%C3%A3o%20(Telecom%20X).png" alt="Customer Churn Analysis Project">
+            <div class="card-content">
+                <h3>Customer Churn Analysis (Telecom X)</h3>
+                <p>A comprehensive exploratory data analysis to identify the main factors influencing customer churn, aiming to guide retention strategies.</p>
+                <p><strong>Tools:</strong> Python, Pandas, Matplotlib, Seaborn.</p>
+                <div class="project-links">
+                    <a href="https://github.com/SueliHora/challenge2-Desafio_Telecom_X/blob/main/Desafio_Telecom_X.ipynb" class="btn-project" target="_blank">View Analysis</a>
+                    <a href="https://github.com/SueliHora/challenge2-Desafio_Telecom_X" class="btn-project" target="_blank">Repository</a>
                 </div>
-            </div>
-        </section>
-
-        <section class="projects">
-            <h2>Featured Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <img src="https://raw.githubusercontent.com/suelidahora/portifolio_projetos/main/images/An%C3%A1lise%20de%20Evas%C3%A3o%20(Telecom%20X).png" alt="Telecom X Project Chart">
-                    <h3>Customer Churn Analysis (Telecom X)</h3>
-                    <p>A complete exploratory data analysis of a telecommunications company's dataset to identify the main factors influencing customer churn, aiming to guide retention strategies.</p>
-                    <p><strong>Tools:</strong> Python, Pandas, Matplotlib, Seaborn.</p>
-                    <div class="project-links">
-                        <a href="https://github.com/SueliHora/challenge2-Desafio_Telecom_X/blob/main/Desafio_Telecom_X.ipynb" class="btn-project" target="_blank">View Analysis</a>
-                        <a href="https://github.com/SueliHora/challenge2-Desafio_Telecom_X" class="btn-project" target="_blank">View Repository</a>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <img src="https://raw.githubusercontent.com/suelidahora/portifolio_projetos/main/images/Amigo%20Secreto.png" alt="Secret Santa Project App">
-                    <h3>Secret Santa Drawing Application</h3>
-                    <p>An interactive web application to organize Secret Santa drawings. Developed with pure HTML, CSS, and JavaScript, the tool includes duplicate name validation and the logic for a fair, random draw, focusing on user experience.</p>
-                    <p><strong>Tools:</strong> HTML, CSS, JavaScript.</p>
-                    <div class="project-links">
-                        <a href="[LINK TO THE LIVE APP - GITHUB PAGES]" class="btn-project" target="_blank">View Live App</a>
-                        <a href="https://github.com/SueliHora/Challenge-Amigo-Secreto" class="btn-project" target="_blank">View Code</a>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <img src="https://raw.githubusercontent.com/suelidahora/portifolio_projetos/main/images/An%C3%A1lise%20de%20Desempenho%20de%20Lojas.png" alt="Latam Project Chart">
-                    <h3>Challenge Data Science LATAM</h3>
-                    <p>Analysis of a dataset focused on the Latin American market. The project involved data cleaning, processing, and visualization to extract insights on regional trends and recommend a strategic business decision.</p>
-                    <p><strong>Tools:</strong> Python, Exploratory Data Analysis (EDA), Data Visualization.</p>
-                    <div class="project-links">
-                        <a href="[LINK TO THE .ipynb NOTEBOOK FOR THIS PROJECT]" class="btn-project" target="_blank">View Analysis</a>
-                        <a href="https://github.com/SueliHora/Challege-Data-Science-Latam" class="btn-project" target="_blank">View Repository</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="skills">
-            <h2>Core Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3><i class="fas fa-chart-bar"></i> Data Analysis & BI</h3>
-                    <ul>
-                        <li>Exploratory Data Analysis (EDA)</li>
-                        <li>Data Cleaning and Processing (ETL)</li>
-                        <li>Data Storytelling</li>
-                        <li>Power BI</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h3><i class="fas fa-code"></i> Languages & Tools</h3>
-                    <ul>
-                        <li>Python (with Pandas, Seaborn, Matplotlib)</li>
-                        <li>SQL for data extraction</li>
-                        <li>VBA for automation</li>
-                        <li>Git & GitHub for version control</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h3><i class="fas fa-cloud"></i> Cloud & Data Engineering</h3>
-                    <ul>
-                        <li>AWS (Fundamental Concepts)</li>
-                        <li>Data Engineering Concepts</li>
-                        <li>API Development (concepts)</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <section class="experience">
-            <h2>Professional Experience</h2>
-            <div class="experience-grid">
-                <div class="experience-card">
-                    <h3>Financial Data Analyst (Freelance)</h3>
-                    <p class="company">Shora Soluções Inteligentes</p>
-                    <p class="period">Jul 2024 - Present</p>
-                    <p class="location">Providing financial data analysis services with a focus on automation and Business Intelligence.</p>
-                </div>
-                <div class="experience-card">
-                    <h3>Financial Analyst</h3>
-                    <p class="company">FTD Educação</p>
-                    <p class="period">Jan 2016 - Jun 2024</p>
-                    <p class="location">Responsible for control and creation of Power BI dashboards for analysis of royalties and currency exchange payments.</p>
-                </div>
-                <div class="experience-card">
-                    <h3>Senior Financial Analyst</h3>
-                    <p class="company">Insper</p>
-                    <p class="period">Sep 2009 - Nov 2011</p>
-                    <p class="location">Led financial analysis and management of investments, currency exchange, and royalties.</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="education">
-            <h2>Featured Education</h2>
-            <div class="education-card">
-                <p class="course">MBA in Technology for Business with Data and AI</p>
-                <p class="institution">Pontifical Catholic University of Rio Grande do Sul (PUCRS)</p>
-                <p class="period">Completed in July 2025</p>
-                <p class="highlight">Graduated with distinction for a final project on applying AI to risk analysis, achieving top marks.</p>
-            </div>
-        </section>
-
-    </main>
-
-    <footer>
-        <div class="footer-content">
-            <p>© 2025 Sueli Da Hora Moreira - All rights reserved.</p>
-            <div class="contact-info">
-                <a href="mailto:s.horamoreira@gmail.com"><i class="fas fa-envelope"></i> s.horamoreira@gmail.com</a>
             </div>
         </div>
-    </footer>
-
-    <script src="script.js"></script>
-</body>
-</html>
+        <div class="project-card">
+            <img src="https://raw.githubusercontent.com/suelidahora/portifolio_projetos/main/images/Amigo%20Secreto.png" alt="Secret Santa Application Project">
+            <div class="card-content">
+                <h3>Secret Santa Drawing Application</h3>
+                <p>An interactive web application to organize Secret Santa drawings. Developed with pure HTML, CSS, and JavaScript, the tool focuses on user experience.</p>
+                <p><strong>Tools:</strong> HTML, CSS, JavaScript.</p>
+                <div class="project-links">
+                    <a href="[LINK TO THE LIVE APP - GITHUB PAGES]" class="btn-project" target="_blank">View Live App</a>
+                    <a href="https://github.com/SueliHora/Challenge-Amigo-Secreto" class="btn-project" target="_blank">View Code</a>
+                </div>
+            </div>
+        </div>
+        <div class="project-card">
+            <img src="https://raw.githubusercontent.com/suelidahora/portifolio_projetos/main/images/An%C3%A1lise%20de%20Desempenho%20de%20Lojas.png" alt="Store Performance Analysis Project">
+            <div class="card-content">
+                <h3>Store Performance Analysis</h3>
+                <p>A comparative analysis of four stores to provide a strategic recommendation on which unit to sell, based on financial and customer satisfaction metrics.</p>
+                <p><strong>Tools:</strong> Python, Pandas, Matplotlib.</p>
+                <div class="project-links">
+                    <a href="[LINK TO THE ANALYSIS FOR THIS PROJECT]" class="btn-project" target="_blank">View Analysis</a>
+                    <a href="https://github.com/SueliHora/Challege-Data-Science-Latam" class="btn-project" target="_blank">Repository</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
