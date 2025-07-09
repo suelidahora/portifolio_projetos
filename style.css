@@ -11,13 +11,13 @@
 
 /* Reset básico e estilos globais */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* FONTE CORRIGIDA AGORA! */
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     background-color: var(--background-color); /* Fundo da página agora é rosa claro */
     color: var(--text-color);
-    line-height: 1.6;
+    line-height: 1.6; /* Line-height padrão para o corpo do texto */
 }
 
 .container {
@@ -41,7 +41,7 @@ header {
 
 header nav {
     display: flex;
-    justify-content: space-between; /* Empurra os itens para as extremidades */
+    justify-content: space-between; /* Ícones sociais à esquerda, idiomas à direita */
     align-items: center;
     flex-wrap: wrap;
     max-width: 1200px; /* Alinha o conteúdo da nav com o container principal */
@@ -113,7 +113,7 @@ header nav {
     box-sizing: border-box; /* Inclui padding na largura total */
     display: flex; /* Para centralizar o quadro interno */
     justify-content: center; /* Centraliza horizontalmente o quadro menor */
-    align-items: center; /* Centraliza verticalmente o quadro menor */
+    align-items: center; /* Alinha verticalmente o quadro menor */
 }
 
 /* O .profile-container é o "quadro menor" interno (AGORA COM AS MEDIDAS EXATAS!) */
@@ -121,16 +121,15 @@ header nav {
     background-color: var(--section-bg); /* Fundo branco do quadro menor */
     border-radius: 15px; /* Bordas um pouco menores para diferenciar */
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); /* Sombra mais sutil para o quadro menor */
-    padding: 1.5rem; /* <<< CHAVE: Padding interno DIMINUIDO para ser mais justo */
+    padding: 32px; /* Padding interno do quadro menor (Exato do seu print) */
     display: flex;
     align-items: center;
     gap: 2rem; /* Espaçamento entre foto e texto */
     flex-direction: row; /* Foto à esquerda */
     text-align: left;
     height: auto;
-    width: 100%; /* Ocupa 100% da largura DISPONÍVEL (dentro do padding do .hero) */
-    max-width: none; /* Remove qualquer max-width fixo para que o padding seja a margem */
-    margin: 0; /* Remove margens automáticas */
+    max-width: 760px; /* Largura MÁXIMA do quadro menor (Exato do seu print) */
+    margin: 0 auto; /* Centraliza o quadro menor dentro do maior */
     box-sizing: border-box;
 }
 
@@ -152,6 +151,7 @@ header nav {
     color: var(--primary-color);
     font-size: 2.5rem;
     margin-bottom: 0.5rem;
+    text-align: left; /* Garante alinhamento à esquerda */
 }
 
 /* Alinhamento de "Analista de Dados & Business Intelligence" e sua linha rosa */
@@ -180,9 +180,10 @@ header nav {
 
 
 .welcome-text p {
-    font-size: 1.05rem;
+    font-size: 1rem; /* Padronizado para 1rem */
     margin-bottom: 1.5rem;
     color: var(--text-color);
+    text-align: left; /* Garante alinhamento à esquerda */
 }
 
 .cta-buttons {
@@ -284,6 +285,7 @@ section h2::after {
     font-size: 1.1rem;
     color: var(--secondary-color); /* Instituição em rosa */
     margin-bottom: 0.3rem;
+    font-weight: bold; /* ADICIONADO */
 }
 
 .education-card .period {
@@ -292,8 +294,8 @@ section h2::after {
     margin-bottom: 0.8rem;
 }
 
-.education-card p {
-    font-size: 1rem;
+.education-card p { /* Padrão de texto para o parágrafo da educação */
+    font-size: 1rem; /* Padronizado para 1rem */
     color: #555;
 }
 
@@ -332,7 +334,7 @@ section h2::after {
 }
 
 .experience-card p {
-    font-size: 1rem;
+    font-size: 1rem; /* Padronizado para 1rem */
     color: #555;
 }
 
