@@ -318,6 +318,13 @@ section h2::after {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
+.project-card .card-content {
+    padding-bottom: 0; /* Remove padding extra na parte inferior do conteúdo do card */
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Permite que o conteúdo cresça */
+}
+
 .project-card h3 {
     color: var(--primary-color); /* Título do projeto em roxo */
     font-size: 1.6rem; /* Tamanho da fonte igual aos outros h3 de card */
@@ -339,9 +346,8 @@ section h2::after {
     margin-bottom: 1.5rem; /* Espaço abaixo das ferramentas antes dos botões */
 }
 
-
 .project-links {
-    margin-top: auto; /* Empurra os links para o final do card */
+    margin-top: 1.5rem; /* Espaço acima dos botões, separando do texto */
     display: flex;
     flex-direction: column; /* Botões um abaixo do outro */
     gap: 0.8rem;
