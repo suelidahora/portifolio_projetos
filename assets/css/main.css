@@ -328,7 +328,7 @@ section h2::after {
 .project-card h3 {
     color: var(--primary-color); /* Título do projeto em roxo */
     font-size: 1.6rem; /* Tamanho da fonte igual aos outros h3 de card */
-    margin-bottom: 1rem;
+    margin-bottom: 1rem; /* Espaço abaixo do título */
 }
 
 .project-card p {
@@ -342,7 +342,7 @@ section h2::after {
     font-weight: 600;
     color: var(--primary-color); /* Roxo para as ferramentas */
     font-size: 0.95em;
-    margin-top: 0; /* Remove margem superior extra se a p anterior tiver margem inferior */
+    margin-top: 0.5rem; /* Menor espaço se o texto da descrição não tiver muito */
     margin-bottom: 1.5rem; /* Espaço abaixo das ferramentas antes dos botões */
 }
 
@@ -352,6 +352,7 @@ section h2::after {
     display: flex;
     flex-direction: column; /* Botões um abaixo do outro */
     gap: 0.8rem;
+    padding-top: 1rem; /* ESPAÇO ENTRE O TEXTO E O BOTÃO */
 }
 
 .btn-project {
