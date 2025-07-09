@@ -11,7 +11,7 @@
 
 /* Reset básico e estilos globais */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* FONTE CORRIGIDA AGORA! */
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -283,6 +283,7 @@ section h2::after {
     font-size: 1.1rem;
     color: var(--secondary-color); /* Instituição em rosa */
     margin-bottom: 0.3rem;
+    font-weight: bold; /* ADICIONADO */
 }
 
 .education-card .period {
