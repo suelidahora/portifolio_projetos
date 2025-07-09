@@ -149,8 +149,8 @@ main {
 }
 
 .profile-image {
-    width: 300px;
-    height: 300px;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
     object-fit: cover;
     border: 5px solid var(--primary-color);
@@ -421,7 +421,7 @@ footer {
     }
 
     .profile-image {
-        width: 200px;
-        height: 200px;
+        width: 100px;
+        height: 100px;
     }
 }
