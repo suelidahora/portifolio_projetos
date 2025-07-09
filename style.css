@@ -27,37 +27,32 @@ body {
     box-sizing: border-box; /* Inclui padding na largura total */
 }
 
-/* Header - SEÇÃO REESCRITA COM FOCO NO ALINHAMENTO FORÇADO */
+/* Header */
 header {
     background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
     color: white;
     padding: 1rem 0;
     position: sticky;
-    width: 100%;
+    width: 100%; /* Ocupa 100% da largura */
     top: 0;
     z-index: 1000;
     box-shadow: 0 2px 10px var(--shadow-color);
-    display: flex; /* Transforma o header em flex container */
-    justify-content: center; /* Centraliza o conteúdo principal */
-    align-items: center;
 }
 
-header nav { /* A nav precisa ocupar a largura máxima para o space-between funcionar */
+header nav {
     display: flex;
-    justify-content: space-between; /* Ícones Sociais na EXTREMIDADE ESQUERDA, Idiomas na EXTREMIDADE DIREITA */
+    justify-content: space-between; /* Empurra os itens para as extremidades */
     align-items: center;
-    width: 100%; /* Garante que a nav ocupe toda a largura disponível no header */
-    max-width: 1200px; /* Limita a largura do conteúdo da nav */
-    padding: 0 20px; /* Padding lateral para o conteúdo, como no .container */
-    box-sizing: border-box;
+    flex-wrap: wrap;
+    max-width: 1200px; /* Alinha o conteúdo da nav com o container principal */
+    margin: 0 auto; /* Centraliza a nav */
+    padding: 0 20px; /* Mantém o padding lateral */
 }
 
-/* Social Links - Não precisa de muita alteração, pois o pai (nav) já alinha */
 .social-links {
     display: flex;
     align-items: center;
-    gap: 1rem;
-    /* margin-right: auto; -- Removido, space-between já faz o trabalho */
+    gap: 1rem; /* Espaçamento entre os ícones */
 }
 
 .social-links a {
@@ -65,12 +60,12 @@ header nav { /* A nav precisa ocupar a largura máxima para o space-between func
     font-size: 1.5rem;
     transition: all 0.3s ease;
     text-decoration: none;
-    display: inline-block;
-    width: 40px;
+    display: inline-block; /* Para que os estilos de width/height/border-radius funcionem */
+    width: 40px; /* Tamanho dos botões de ícone */
     height: 40px;
-    line-height: 40px;
-    text-align: center;
-    border-radius: 50%;
+    line-height: 40px; /* Centraliza o ícone verticalmente */
+    text-align: center; /* Centraliza o ícone horizontalmente */
+    border-radius: 50%; /* Faz o botão redondo */
     background-color: transparent;
     box-shadow: none;
 }
@@ -81,12 +76,10 @@ header nav { /* A nav precisa ocupar a largura máxima para o space-between func
     background-color: rgba(255, 255, 255, 0.2);
 }
 
-/* Language Selector - Não precisa de margin-left: auto; */
 .language-selector {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    /* margin-left: auto; -- Removido, space-between já faz o trabalho */
 }
 
 .btn-language {
@@ -120,7 +113,7 @@ header nav { /* A nav precisa ocupar a largura máxima para o space-between func
     box-sizing: border-box; /* Inclui padding na largura total */
     display: flex; /* Para centralizar o quadro interno */
     justify-content: center; /* Centraliza horizontalmente o quadro menor */
-    align-items: center; /* Alinha verticalmente o quadro menor */
+    align-items: center; /* Centraliza verticalmente o quadro menor */
 }
 
 /* O .profile-container é o "quadro menor" interno (AGORA COM AS MEDIDAS EXATAS!) */
@@ -128,15 +121,16 @@ header nav { /* A nav precisa ocupar a largura máxima para o space-between func
     background-color: var(--section-bg); /* Fundo branco do quadro menor */
     border-radius: 15px; /* Bordas um pouco menores para diferenciar */
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); /* Sombra mais sutil para o quadro menor */
-    padding: 32px; /* Padding interno do quadro menor (Exato do seu print) */
+    padding: 1.5rem; /* <<< CHAVE: Padding interno DIMINUIDO para ser mais justo */
     display: flex;
     align-items: center;
     gap: 2rem; /* Espaçamento entre foto e texto */
     flex-direction: row; /* Foto à esquerda */
     text-align: left;
     height: auto;
-    max-width: 760px; /* Largura MÁXIMA do quadro menor (Exato do seu print) */
-    margin: 0 auto; /* Centraliza o quadro menor dentro do maior */
+    width: 100%; /* Ocupa 100% da largura DISPONÍVEL (dentro do padding do .hero) */
+    max-width: none; /* Remove qualquer max-width fixo para que o padding seja a margem */
+    margin: 0; /* Remove margens automáticas */
     box-sizing: border-box;
 }
 
