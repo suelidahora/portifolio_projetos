@@ -113,7 +113,7 @@ header nav {
     box-sizing: border-box; /* Inclui padding na largura total */
     display: flex; /* Para centralizar o quadro interno */
     justify-content: center; /* Centraliza horizontalmente o quadro menor */
-    align-items: center; /* Centraliza verticalmente o quadro menor */
+    align-items: center; /* Alinha verticalmente o quadro menor */
 }
 
 /* O .profile-container é o "quadro menor" interno (AGORA COM AS MEDIDAS EXATAS!) */
