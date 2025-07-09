@@ -102,8 +102,8 @@ header nav {
     padding: 3rem;
     background-color: var(--section-bg);
     border-radius: 20px;
-    box-shadow: 0 4px 20px var(--shadow-color);
-    flex-direction: row; /* Foto à esquerda (padrão) */
+    box-shadow: 0 4px 20px var(--shadow-color); /* Sombra padrão */
+    flex-direction: row; /* Foto à esquerda */
     text-align: left; /* Alinha o texto à esquerda */
 }
 
