@@ -41,7 +41,7 @@ header {
 
 header nav {
     display: flex;
-    justify-content: center; /* Centraliza o conteúdo (ícones sociais) */
+    justify-content: space-between; /* Empurra os itens para as extremidades (Social links ESQUERDA, Idiomas DIREITA) */
     align-items: center;
     flex-wrap: wrap;
     max-width: 1200px; /* Alinha o conteúdo da nav com o container principal */
@@ -53,7 +53,6 @@ header nav {
     display: flex;
     align-items: center;
     gap: 1rem; /* Espaçamento entre os ícones */
-    /* Este elemento agora estará centralizado pelo justify-content: center do nav */
 }
 
 .social-links a {
@@ -81,8 +80,8 @@ header nav {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    margin-left: auto; /* Empurra o seletor de idioma para a direita */
-    padding-left: 1rem; /* Espaço entre os ícones sociais e o seletor de idioma */
+    /* justify-content: flex-end; -- Removido, justify-content: space-between no nav já faz o trabalho */
+    /* margin-left: auto; -- Removido, justify-content: space-between no nav já faz o trabalho */
 }
 
 .btn-language {
