@@ -102,7 +102,7 @@ header nav {
     font-weight: bold;
 }
 
-/* Hero Section (O "quadro maior" branco) */
+/* Hero Section (O "quadro maior" branco da área de boas-vindas) */
 .hero {
     max-width: 1200px; /* Largura máxima da seção */
     margin: 2rem auto; /* Centraliza a seção e dá margem vertical */
@@ -128,7 +128,7 @@ header nav {
     flex-direction: row; /* Foto à esquerda */
     text-align: left;
     height: auto;
-    max-width: 800px; /* <--- ESSA É A MEDIDA CHAVE: Reduz para criar o espaçamento lateral interno */
+    max-width: 700px; /* <--- ESSA É A MEDIDA FINAL: Reduz para criar o espaçamento lateral desejado */
     margin: 0 auto; /* Centraliza o quadro menor dentro do maior */
     box-sizing: border-box;
 }
@@ -230,7 +230,7 @@ header nav {
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* General Section Styling (Aplicado a todas as <section> EXCETO a Hero) */
+/* General Section Styling (Aplicado a todas as <section>) */
 section {
     max-width: 1200px;
     margin: 2rem auto;
@@ -508,7 +508,7 @@ footer {
         padding: 1.5rem; /* Ajuste para telas menores */
         margin: 1rem auto;
     }
-    
+
     .profile-container {
         flex-direction: column;
         text-align: center;
