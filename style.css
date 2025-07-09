@@ -9,7 +9,7 @@
     --shadow-color: rgba(155, 77, 202, 0.1); /* Sombra roxa suave */
 }
 
-/* Reset básico e estilos globals */
+/* Reset básico e estilos globais */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* FONTE CORRIGIDA AGORA! */
     margin: 0;
