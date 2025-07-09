@@ -27,32 +27,37 @@ body {
     box-sizing: border-box; /* Inclui padding na largura total */
 }
 
-/* Header */
+/* Header - SEÇÃO REESCRITA COM FOCO NO ALINHAMENTO FORÇADO */
 header {
     background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
     color: white;
     padding: 1rem 0;
     position: sticky;
-    width: 100%; /* Ocupa 100% da largura */
+    width: 100%;
     top: 0;
     z-index: 1000;
     box-shadow: 0 2px 10px var(--shadow-color);
-}
-
-header nav {
-    display: flex;
-    justify-content: space-between; /* Empurra os itens para as extremidades */
+    display: flex; /* Transforma o header em flex container */
+    justify-content: center; /* Centraliza o conteúdo principal */
     align-items: center;
-    flex-wrap: wrap;
-    max-width: 1200px; /* Alinha o conteúdo da nav com o container principal */
-    margin: 0 auto; /* Centraliza a nav */
-    padding: 0 20px; /* Mantém o padding lateral */
 }
 
+header nav { /* A nav precisa ocupar a largura máxima para o space-between funcionar */
+    display: flex;
+    justify-content: space-between; /* Ícones Sociais na EXTREMIDADE ESQUERDA, Idiomas na EXTREMIDADE DIREITA */
+    align-items: center;
+    width: 100%; /* Garante que a nav ocupe toda a largura disponível no header */
+    max-width: 1200px; /* Limita a largura do conteúdo da nav */
+    padding: 0 20px; /* Padding lateral para o conteúdo, como no .container */
+    box-sizing: border-box;
+}
+
+/* Social Links - Não precisa de muita alteração, pois o pai (nav) já alinha */
 .social-links {
     display: flex;
     align-items: center;
-    gap: 1rem; /* Espaçamento entre os ícones */
+    gap: 1rem;
+    /* margin-right: auto; -- Removido, space-between já faz o trabalho */
 }
 
 .social-links a {
@@ -60,12 +65,12 @@ header nav {
     font-size: 1.5rem;
     transition: all 0.3s ease;
     text-decoration: none;
-    display: inline-block; /* Para que os estilos de width/height/border-radius funcionem */
-    width: 40px; /* Tamanho dos botões de ícone */
+    display: inline-block;
+    width: 40px;
     height: 40px;
-    line-height: 40px; /* Centraliza o ícone verticalmente */
-    text-align: center; /* Centraliza o ícone horizontalmente */
-    border-radius: 50%; /* Faz o botão redondo */
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
     background-color: transparent;
     box-shadow: none;
 }
@@ -76,10 +81,12 @@ header nav {
     background-color: rgba(255, 255, 255, 0.2);
 }
 
+/* Language Selector - Não precisa de margin-left: auto; */
 .language-selector {
     display: flex;
     align-items: center;
     gap: 0.5rem;
+    /* margin-left: auto; -- Removido, space-between já faz o trabalho */
 }
 
 .btn-language {
