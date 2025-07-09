@@ -190,7 +190,7 @@ header nav {
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* General Section Styling (Aplicado a todas as <section> EXCETO a Hero) */
+/* General Section Styling (Aplicado a todas as <section>) */
 section {
     max-width: 1200px;
     margin: 2rem auto;
@@ -235,7 +235,7 @@ section h2::after {
 .education-card .course {
     font-size: 1.4rem;
     font-weight: bold;
-    color: var(--primary-color);
+    color: var(--secondary-color); /* AGORA ESTÁ ROSA! */
     margin-bottom: 0.5rem;
 }
 
@@ -355,7 +355,7 @@ section h2::after {
     display: flex;
     flex-direction: column;
     gap: 0.8rem;
-    padding-top: 1rem;
+    padding-top: 1rem; /* Espaço entre o texto e o botão */
 }
 
 .btn-project {
@@ -458,17 +458,17 @@ footer {
     transition: color 0.3s ease;
 }
 
-.footer-content .contact-info a:hover {
+.contact-info a:hover {
     color: var(--accent-color);
 }
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
-    .hero, section { /* Aplicado a hero e outras sections */
+    .hero {
         padding: 2rem; /* Reduz padding em telas menores */
         margin: 1rem auto; /* Ajusta margem */
     }
-
+    
     .profile-container {
         flex-direction: column;
         text-align: center;
@@ -491,6 +491,11 @@ footer {
 
     .cta-buttons {
         justify-content: center;
+    }
+
+    section { /* Aplicado a todas as sections */
+        padding: 2rem;
+        margin: 1rem auto;
     }
 
     section h2 {
