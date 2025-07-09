@@ -41,7 +41,7 @@ header {
 
 header nav {
     display: flex;
-    justify-content: space-between; /* Empurra os itens para as extremidades */
+    justify-content: center; /* Centraliza o conteúdo (ícones sociais) */
     align-items: center;
     flex-wrap: wrap;
     max-width: 1200px; /* Alinha o conteúdo da nav com o container principal */
@@ -53,6 +53,7 @@ header nav {
     display: flex;
     align-items: center;
     gap: 1rem; /* Espaçamento entre os ícones */
+    /* Este elemento agora estará centralizado pelo justify-content: center do nav */
 }
 
 .social-links a {
@@ -80,6 +81,8 @@ header nav {
     display: flex;
     align-items: center;
     gap: 0.5rem;
+    margin-left: auto; /* Empurra o seletor de idioma para a direita */
+    padding-left: 1rem; /* Espaço entre os ícones sociais e o seletor de idioma */
 }
 
 .btn-language {
@@ -121,16 +124,15 @@ header nav {
     background-color: var(--section-bg); /* Fundo branco do quadro menor */
     border-radius: 15px; /* Bordas um pouco menores para diferenciar */
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); /* Sombra mais sutil para o quadro menor */
-    padding: 1.5rem; /* <<< CHAVE: Padding interno DIMINUIDO para ser mais justo */
+    padding: 32px; /* Padding interno do quadro menor (Exato do seu print) */
     display: flex;
     align-items: center;
     gap: 2rem; /* Espaçamento entre foto e texto */
     flex-direction: row; /* Foto à esquerda */
     text-align: left;
     height: auto;
-    width: 100%; /* Ocupa 100% da largura DISPONÍVEL (dentro do padding do .hero) */
-    max-width: none; /* Remove qualquer max-width fixo para que o padding seja a margem */
-    margin: 0; /* Remove margens automáticas */
+    max-width: 760px; /* Largura MÁXIMA do quadro menor (Exato do seu print) */
+    margin: 0 auto; /* Centraliza o quadro menor dentro do maior */
     box-sizing: border-box;
 }
 
