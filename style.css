@@ -11,7 +11,7 @@
 
 /* Reset básico e estilos globais */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* FONTE CORRIGIDA AGORA! */
     margin: 0;
     padding: 0;
     box-sizing: border-box;
