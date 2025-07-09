@@ -3,129 +3,219 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sueli Hora - Analista de Dados & BI</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Teko:wght@400;700&display=swap" rel="stylesheet">
+    <title>Sueli da Hora - Analista de Dados</title>
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <style>
-        /* CSS Reset e Estilos Gerais */
-        :root {
-            --cor-primaria: #8e44ad;
-            --cor-secundaria: #e23b81;
-            --cor-texto: #333;
-            --cor-fundo: #f4f7f6;
-            --sombra: 0 5px 20px rgba(0,0,0,0.08);
-        }
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Roboto', sans-serif; background-color: var(--cor-fundo); color: var(--cor-texto); line-height: 1.7; }
-        .container { max-width: 1100px; margin: 0 auto; padding: 20px; }
-
-        /* Header */
-        header { padding: 20px 0; text-align: center; }
-        .social-links a { font-size: 1.8em; color: var(--cor-primaria); margin: 0 15px; text-decoration: none; transition: color 0.3s; }
-        .social-links a:hover { color: var(--cor-secundaria); }
-
-        /* Hero Section */
-        .hero { display: flex; align-items: center; justify-content: center; gap: 50px; padding: 40px 0; flex-wrap: wrap; }
-        .profile-image { width: 220px; height: 220px; border-radius: 50%; object-fit: cover; border: 8px solid #fff; box-shadow: var(--sombra); }
-        .welcome-text { max-width: 600px; text-align: center; }
-        .welcome-text h1 { font-family: 'Teko', sans-serif; font-size: 4.5em; line-height: 1; color: var(--cor-primaria); margin: 0; }
-        .welcome-text h2 { font-family: 'Teko', sans-serif; font-size: 2.5em; line-height: 1; color: var(--cor-secundaria); margin-bottom: 20px; }
-        .welcome-text p { font-size: 1.1em; margin-bottom: 30px; }
-        .btn { display: inline-block; padding: 12px 30px; margin: 5px; border-radius: 50px; text-decoration: none; font-weight: bold; transition: all 0.3s; border: 2px solid var(--cor-primaria); }
-        .btn-primary { background-color: var(--cor-primaria); color: #fff; } .btn-primary:hover { background-color: var(--cor-secundaria); border-color: var(--cor-secundaria); }
-        .btn-secondary { color: var(--cor-primaria); } .btn-secondary:hover { background-color: var(--cor-primaria); color: #fff; }
-
-        /* Seções */
-        section { padding: 60px 0; }
-        section h2 { font-family: 'Teko', sans-serif; font-size: 3em; text-align: center; margin-bottom: 50px; color: var(--cor-primaria); }
-        
-        /* Projetos */
-        .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
-        .project-card { background-color: #fff; border-radius: 10px; box-shadow: var(--sombra); display: flex; flex-direction: column; overflow: hidden; transition: transform 0.3s, box-shadow 0.3s; }
-        .project-card:hover { transform: translateY(-10px); box-shadow: 0 10px 25px rgba(0,0,0,0.12); }
-        .project-card img { width: 100%; height: 200px; object-fit: cover; }
-        .card-content { padding: 25px; display: flex; flex-direction: column; flex-grow: 1; }
-        .card-content h3 { font-family: 'Teko', sans-serif; font-size: 1.8em; margin: 0 0 15px 0; }
-        .card-content p { font-size: 1em; flex-grow: 1; margin-bottom: 1em; }
-        .project-links { margin-top: auto; padding-top: 15px; border-top: 1px solid #f0f0f0; text-align: center; }
-        .btn-project { display: inline-block; padding: 8px 18px; margin: 5px; border-radius: 5px; text-decoration: none; background-color: #eee; color: #333; font-weight: bold; border: 1px solid #ddd; transition: background-color 0.2s; }
-        .btn-project:hover { background-color: var(--cor-secundaria); color: #fff !important; border-color: var(--cor-secundaria); }
-
-        /* Footer */
-        footer { text-align: center; padding: 40px 20px; margin-top: 40px; background: #333; color: #fff; }
-    </style>
 </head>
 <body>
-
     <header>
-        <div class="social-links">
-            <a href="https://linkedin.com/in/sueli-da-hora/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-            <a href="https://github.com/SueliHora" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-            <a href="mailto:s.horamoreira@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+        <nav class="social-links">
+            <a href="https://linkedin.com/in/sueli-da-hora/" target="_blank" title="LinkedIn">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://github.com/SueliHora" target="_blank" title="GitHub">
+                <i class="fab fa-github"></i>
+            </a>
+                        
+            <a href="https://medium.com/@suelidahoramoreira" target="_blank" title="Medium">
+                <i class="fab fa-medium"></i>
+            </a>
+            <a href="https://wa.me/5511992077787" target="_blank" title="WhatsApp">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+            <a href="mailto:s.horamoreira@gmail.com" title="Email">
+                <i class="fas fa-envelope"></i>
+            </a>
+        </nav>
+        <div class="language-selector">
+            <button class="btn btn-language active" onclick="changeLanguage('pt')">PT</button>
+            <button class="btn btn-language" onclick="changeLanguage('en')">EN</button>
         </div>
     </header>
 
-    <main class="container">
+    <main>
         <section class="hero">
             <div class="profile-container">
                 <img src="https://raw.githubusercontent.com/suelidahora/portifolio_projetos/main/FotoSu2.jpg" alt="Sueli da Hora" class="profile-image">
                 <div class="welcome-text">
-                    <h1>SUELI HORA</h1>
-                    <h2>ANALISTA DE DADOS & BUSINESS INTELLIGENCE</h2>
-                    <p>Recém-formada no MBA em Engenharia de Dados e IA pela PUCRS, sou uma profissional apaixonada por transformar dados em decisões de negócio estratégicas e gerar valor através de automação e insights.</p>
+                    <h1>Sueli da Hora</h1>
+                    <h2>Analista de Dados</h2>
+                    <p> Olá! Bem-vindo(a) ao meu portfólio como Analista de Dados.
+
+Sou formada em Sistemas de Informação e Técnica em Processamento de Dados. Atualmente cursando MBA em Tecnologia para Negócios com Dados e IA pela PUC-RS. Minha formação me capacita a aplicar técnicas de análise de dados e inteligência artificial para apoiar decisões estratégicas e fomentar a inovação empresarial.
+Aqui, apresento minhas habilidades e projetos em Ciência de Dados, destacando meu trabalho com dados públicos e competências técnicas. Para mais detalhes, baixe meu currículo completo ou entre em contato pelas redes sociais.
+  </p>
                     <div class="cta-buttons">
-                        <a href="https://raw.githubusercontent.com/suelidahora/portifolio_projetos/main/CV-PT-BR.pdf" class="btn btn-primary" target="_blank">Download CV</a>
-                        <a href="mailto:s.horamoreira@gmail.com" class="btn btn-secondary">Contato</a>
+                        <a href="https://github.com/suelidahora/portifolio_projetos/raw/main/CV-PT-BR.pdf"  class="btn btn-primary">
+                            <i class="fas fa-download"></i> Download CV
+                        </a>
+                        <a href="mailto:s.horamoreira@gmail.com" class="btn btn-secondary">
+                            <i class="fas fa-envelope"></i> Contact
+                        </a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="featured-projects">
-            <h2>Projetos de Destaque</h2>
+        <section class="education">
+    <h2>Formação Acadêmica</h2>
+    <div class="education-card">
+        <p class="course">MBA em Tecnologia para Negócios com Dados e IA</p>
+        <p class="institution">PUC-RS</p>
+        <p class="period">Jun 2024 - Dez 2025</p>
+    </div>
+
+    <div class="education-card">
+        <p class="course">Sistemas de Informação</p>
+        <p class="institution">Universidade Radial</p>
+        <p class="period"> Concluído em Dez 2002</p>
+    </div>
+</section>
+
+        <section class="experience">
+            <h2>Experiência Profissional</h2>
+            <div class="experience-grid">
+                <div class="experience-card">
+                    <h3>Analista de dados & IA (Remoto) - Voluntária</h3>
+                    <p class="company">Pymentech Solutions</p>
+                    <p class="period">Jul 2024 - Atual</p>
+                    <p class="location">Projeto voluntário focado em análise de dados e automação com IA para otimizar operações de e-commerce.
+                    </p>
+                </div>
+                <div class="experience-card">
+                    <h3>Analista Financeiro Pleno (Híbrido) </h3>
+                    <p class="company">FTD Educação</p>
+                    <p class="period">Jan 2016 - Jun 2024</p>
+                    <p class="location">Especialização em controle e criação de dashboards para análise de pagamentos de royalties e câmbio financeiro.
+                     </p>
+
+                </div>
+                <div class="experience-card">
+                    <h3>Analista Financeiro Sênior (Presencial) </h3>
+                    <p class="company">Insper</p>
+                    <p class="period">Set 2009 - Nov 2011</p>
+                    <p class="location"> Liderança em análise financeira e gestão de aplicações, câmbio financeiro e royalties.  </p>
+
+                </div>
+                <div class="experience-card">
+                    <h3>Analista Financeiro Pleno (Presencial)</h3>
+                    <p class="company">Grupo Marista</p>
+                    <p class="period">Mar 1998 - Out 2007</p>
+                    <p class="location"> Desenvolvimento de habilidades analíticas em gestão de tesouraria e contas a pagar. </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="projects">
+            <h2>Projetos</h2>
             <div class="projects-grid">
-                <div class="project-card">
-                    <img src="https://raw.githubusercontent.com/suelidahora/portifolio_projetos/main/images/An%C3%A1lise%20de%20Evas%C3%A3o%20(Telecom%20X).png" alt="Análise de Evasão">
-                    <div class="card-content">
-                        <h3>Análise de Evasão de Clientes</h3>
-                        <p>Análise exploratória para identificar os fatores do churn em uma empresa de telecom, guiando ações de retenção.</p>
-                        <p><strong>Ferramentas:</strong> Python, Pandas, Seaborn</p>
-                        <div class="project-links">
-                            <a href="https://github.com/SueliHora/challenge2-Desafio_Telecom_X" class="btn-project" target="_blank">Ver no GitHub</a>
-                        </div>
+                <div class="project-category">
+                    <h3>Projetos em IA</h3>
+                    <div class="project-cards">
+                        <!-- Add your AI projects here -->
+			  
+		 <p class="company"> Webapp com múltiplos chatbots</p>
                     </div>
                 </div>
-                <div class="project-card">
-                    <img src="https://raw.githubusercontent.com/suelidahora/portifolio_projetos/main/images/An%C3%A1lise%20de%20Desempenho%20de%20Lojas.png" alt="Análise de Lojas">
-                    <div class="card-content">
-                        <h3>Análise de Desempenho de Lojas</h3>
-                        <p>Análise comparativa para fornecer uma recomendação estratégica sobre qual de quatro lojas deveria ser vendida.</p>
-                        <p><strong>Ferramentas:</strong> Python, Pandas, Matplotlib</p>
-                        <div class="project-links">
-                            <a href="https://github.com/SueliHora/Challege-Data-Science-Latam" class="btn-project" target="_blank">Ver no GitHub</a>
-                        </div>
+                <div class="project-category">
+                    <h3>Projetos Python</h3>
+                    <div class="project-cards">
+                        <!-- Add your Python projects here -->
+			<p class="company">DashBoard interativos com Python</p>
+			    		    
                     </div>
                 </div>
-                <div class="project-card">
-                    <img src="https://raw.githubusercontent.com/suelidahora/portifolio_projetos/main/images/Amigo%20Secreto.png" alt="App Amigo Secreto">
-                    <div class="card-content">
-                        <h3>App de Sorteio de Amigo Secreto</h3>
-                        <p>Aplicação web interativa (HTML, CSS, JS) para organizar sorteios, com validação de dados e foco em UX.</p>
-                        <p><strong>Ferramentas:</strong> HTML, CSS, JavaScript</p>
-                        <div class="project-links">
-                            <a href="https://github.com/SueliHora/Challenge-Amigo-Secreto" class="btn-project" target="_blank">Ver no GitHub</a>
-                        </div>
+                <div class="project-category">
+                    <h3>Projetos de Dados</h3>
+                    <div class="project-cards">
+                        <!-- Add your Data projects here -->
+		<p class="company">Sistema de Classificação de Risco do Cliente</p>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="skills">
+            <h2>Habilidades</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3><i class="fas fa-code"></i> Linguagens de Programação e Banco de Dados</h3>
+                    <ul>
+                        <li>Python: Foco em análise de dados e web scraping.</li>
+                        <li>SQL: Extração e manipulação de dados.</li>
+                        <li>Ambientes e Ferramentas: Google Colab, Jupyter Notebook, Pandas Profiling.</li>
+
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <h3><i class="fas fa-chart-bar"></i> Visualização de Dados</h3>
+                    <ul>
+                        <li>Ferramentas: Seaborn, Power BI, Looker.</li>
+                        <li>Análise Gráfica: Dispersão dos dados e DataViz.</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <h3><i class="fas fa-brain"></i> Estatística e Machine Learning</h3>
+                    <ul>
+                        <li>Estatística: Estatística descritiva.</li>
+                        <li>Algoritmos: Regressão, classificação, clusterização, "learn to rank", Naive Bayes, árvores de decisão, Ensemble Learning.</li>
+                        <li>Técnicas: Aprendizagem supervisionada e não supervisionada, técnicas de balanceamento dos dados.</li>
+                        <li>Métricas: Performance dos algoritmos.</li>
+			<li>Bibliotecas: Sklearn, Scipy, Numpy.</li>
+                        <li>Deep Learning: TensorFlow, PyTorch, CNN, RNN, Transformers, Cluster Machine e DL.</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <h3><i class="fas fa-laptop-code"></i> Engenharia de Software</h3>
+                    <ul>
+                        <li>Desenvolvimento: Cookiecutter, Virtual Environment.</li>
+                        <li>Controle de Versão: Git, Github.</li>
+                        <li>Contêineres e Virtualização: Docker.</li>
+                        <li>Frameworks e APIs: Streamlit, Flask, Python API's.</li>
+                        <li>Infraestrutura:AWS Amazon, Google Cloud Platform (GCP), Azure.</li>
+                        <li>Automatização: PyAutoGui.</li>
+                        <li>API de integração para IAs.</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <h3><i class="fas fa-robot"></i> Inteligência Artificial</h3>
+                    <ul>
+                        <li>Ferramentas e Técnicas: Engenharia de Prompts, Orange Canvas, CrewAI.</li>
+                        <li> Visão Computacional: OpenCV.</li>
+                        <li>Plataformas: Hugging Face, LangChain.</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <h3><i class="fas fa-tasks"></i> Metodologia e Ferramentas</h3>
+                    <ul>
+                         <li>Design: UX/UI, Figma, HTML, CSS para criação de dashboards. </li>    
+                        <li>Métodos Ágeis: Kanban, Scrum, Notion, Trello, Jira, GLPI.</li>
+                        <li>Desenvolvimento Rápido: Ferramentas low-code e no-code. </li>
+                        <li>Análise de Dados: Análise Exploratória de Dados com Anaconda Python.</li>
+                        <li>Competências Transversais: Habilidades financeiras e de análise de dados.</li>
+
+                    </ul>
                 </div>
             </div>
         </section>
     </main>
 
     <footer>
-        <p>© 2025 Sueli Da Hora Moreira</p>
+        <div class="footer-content">
+            <p>© 2024 Sueli da Hora - Analista de Dados</p>
+            <div class="contact-info">
+                <a href="mailto:s.horamoreira@gmail.com"><i class="fas fa-envelope"></i> s.horamoreira@gmail.com</a>
+                <a href="tel:+5511992077787"><i class="fas fa-phone"></i> (11) 99207-7787</a>
+                <a href="https://wa.me/5511992077787"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+            </div>
+        </div>
     </footer>
 
+    <script src="script.js"></script>
 </body>
 </html>
