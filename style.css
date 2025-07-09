@@ -1,12 +1,12 @@
 /* Variáveis CSS para cores */
 :root {
-    --primary-color: #6a0dad; /* Roxo principal */
-    --secondary-color: #ff69b4; /* Rosa vibrante */
-    --accent-color: #ffd700; /* Dourado para destaque */
-    --text-color: #333; /* Cor de texto padrão (quase preto) */
-    --background-color: #ffe4e1; /* Fundo Rosa muito claro (Misty Rose) */
+    --primary-color: #9b4dca; /* Roxo principal */
+    --secondary-color: #f06292; /* Rosa vibrante */
+    --accent-color: #ff94c2; /* Rosa claro para destaque */
+    --text-color: #4a4a4a; /* Cinza escuro para texto */
+    --background-color: #fef6f9; /* Fundo Rosa bem claro */
     --section-bg: #ffffff; /* Fundo das seções (branco) */
-    --shadow-color: rgba(0, 0, 0, 0.1); /* Cor da sombra */
+    --shadow-color: rgba(155, 77, 202, 0.1); /* Sombra roxa suave */
 }
 
 /* Reset básico e estilos globais */
@@ -23,7 +23,8 @@ body {
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 20px; /* Padding nas laterais para o conteúdo centralizado */
+    box-sizing: border-box; /* Inclui padding na largura total */
 }
 
 /* Header */
@@ -32,6 +33,7 @@ header {
     color: white;
     padding: 1rem 0;
     position: sticky;
+    width: 100%; /* Ocupa 100% da largura */
     top: 0;
     z-index: 1000;
     box-shadow: 0 2px 10px var(--shadow-color);
@@ -39,9 +41,18 @@ header {
 
 header nav {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Empurra os itens para as extremidades */
     align-items: center;
     flex-wrap: wrap;
+    max-width: 1200px; /* Alinha o conteúdo da nav com o container principal */
+    margin: 0 auto; /* Centraliza a nav */
+    padding: 0 20px; /* Mantém o padding lateral */
+}
+
+.social-links {
+    display: flex;
+    align-items: center;
+    gap: 1rem; /* Espaçamento entre os ícones */
 }
 
 .social-links a {
@@ -49,21 +60,26 @@ header nav {
     font-size: 1.5rem;
     transition: all 0.3s ease;
     text-decoration: none;
-    display: inline-block;
-    width: 40px;
+    display: inline-block; /* Para que os estilos de width/height/border-radius funcionem */
+    width: 40px; /* Tamanho dos botões de ícone */
     height: 40px;
-    line-height: 40px;
-    text-align: center;
-    border-radius: 50%;
+    line-height: 40px; /* Centraliza o ícone verticalmente */
+    text-align: center; /* Centraliza o ícone horizontalmente */
+    border-radius: 50%; /* Faz o botão redondo */
     background-color: transparent;
     box-shadow: none;
-    margin: 0 5px; /* Espaçamento entre os ícones */
 }
 
 .social-links a:hover {
     color: var(--accent-color);
     transform: translateY(-2px);
     background-color: rgba(255, 255, 255, 0.2);
+}
+
+.language-selector {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
 }
 
 .language-selector button {
@@ -74,7 +90,6 @@ header nav {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    margin-left: 0.5rem;
 }
 
 .language-selector button:hover {
@@ -87,24 +102,24 @@ header nav {
     font-weight: bold;
 }
 
-/* Hero Section (O "quadro maior" branco) */
+/* Hero Section (O "quadro maior" branco da área de boas-vindas) */
 .hero {
     max-width: 1200px; /* Largura máxima da seção */
-    margin: 2rem auto; /* Margem da seção, igual às outras */
-    padding: 3rem; /* Padding interno para criar o "espaço do quadro maior" */
+    margin: 2rem auto; /* Centraliza a seção e dá margem vertical */
+    padding: 3rem; /* Padding interno para o espaçamento do "quadro maior" */
     background-color: var(--section-bg); /* Fundo branco do quadro maior */
     border-radius: 20px;
     box-shadow: 0 4px 20px var(--shadow-color); /* Sombra do quadro maior */
     box-sizing: border-box; /* Inclui padding na largura total */
-    display: flex; /* Para centralizar o quadro interno */
-    justify-content: center; /* Centraliza horizontalmente */
-    align-items: center; /* Centraliza verticalmente */
+    display: flex; /* Para centralizar o quadro menor */
+    justify-content: center; /* Centraliza horizontalmente o quadro menor */
+    align-items: center; /* Centraliza verticalmente o quadro menor */
 }
 
 /* O .profile-container é o "quadro menor" interno */
 .profile-container {
     background-color: var(--section-bg); /* Fundo branco do quadro menor */
-    border-radius: 15px; /* Bordas um pouco menores para diferenciar */
+    border-radius: 15px; /* Bordas um pouco menores */
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); /* Sombra mais sutil para o quadro menor */
     padding: 2rem; /* Padding interno do quadro menor */
     display: flex;
@@ -113,8 +128,8 @@ header nav {
     flex-direction: row; /* Foto à esquerda */
     text-align: left;
     height: auto;
-    max-width: 800px; /* Reduz a largura máxima para criar margens laterais */
-    margin: 0 auto; /* Adiciona margem horizontal automática para centralizar */
+    max-width: 900px; /* Reduz a largura máxima para criar margens laterais dentro do .hero */
+    width: 100%; /* Garante que ele se expanda até o max-width */
     box-sizing: border-box;
 }
 
@@ -147,7 +162,7 @@ header nav {
     position: relative;
     padding-bottom: 0.5rem; /* Espaço para a linha */
     text-align: left; /* Garante alinhamento à esquerda */
-    margin-left: 0;
+    margin-left: 0; 
     margin-right: 0;
 }
 
@@ -215,7 +230,7 @@ header nav {
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* General Section Styling (Aplicado a todas as <section>) */
+/* General Section Styling (Aplicado a todas as <section> EXCETO a Hero) */
 section {
     max-width: 1200px;
     margin: 2rem auto;
@@ -493,7 +508,7 @@ footer {
         padding: 1.5rem; /* Ajuste para telas menores */
         margin: 1rem auto;
     }
-    
+
     .profile-container {
         flex-direction: column;
         text-align: center;
