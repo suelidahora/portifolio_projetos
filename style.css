@@ -1,12 +1,12 @@
 /* Variáveis CSS para cores */
 :root {
-    --primary-color: #6a0dad; /* Roxo principal */
-    --secondary-color: #ff69b4; /* Rosa vibrante */
-    --accent-color: #ffd700; /* Dourado para destaque */
-    --text-color: #333; /* Cor de texto padrão (quase preto) */
-    --background-color: #ffe4e1; /* Fundo Rosa muito claro (Misty Rose) */
+    --primary-color: #9b4dca; /* Roxo principal */
+    --secondary-color: #f06292; /* Rosa vibrante */
+    --accent-color: #ff94c2; /* Rosa claro para destaque */
+    --text-color: #4a4a4a; /* Cinza escuro para texto */
+    --background-color: #fef6f9; /* Fundo Rosa bem claro */
     --section-bg: #ffffff; /* Fundo das seções (branco) */
-    --shadow-color: rgba(0, 0, 0, 0.1); /* Cor da sombra */
+    --shadow-color: rgba(155, 77, 202, 0.1); /* Sombra roxa suave */
 }
 
 /* Reset básico e estilos globais */
@@ -15,7 +15,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: var(--background-color); /* Fundo da página agora é rosa claro */
+    background-color: var(--background-color); /* Fundo da página com a nova cor rosa claro */
     color: var(--text-color);
     line-height: 1.6;
 }
@@ -146,7 +146,7 @@ header nav {
     position: relative;
     padding-bottom: 0.5rem; /* Espaço para a linha */
     text-align: left; /* Garante alinhamento à esquerda */
-    margin-left: 0; 
+    margin-left: 0;
     margin-right: 0;
 }
 
@@ -198,7 +198,7 @@ header nav {
 }
 
 .btn-primary:hover {
-    background-color: #5a0a9d;
+    background-color: #7a3bb0; /* Versão mais escura do roxo */
     transform: translateY(-3px);
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
@@ -209,7 +209,7 @@ header nav {
 }
 
 .btn-secondary:hover {
-    background-color: #e55a9d;
+    background-color: #d65581; /* Versão mais escura do rosa */
     transform: translateY(-3px);
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
@@ -354,13 +354,13 @@ section h2::after {
 }
 
 .project-card h3 {
-    color: var(--primary-color);
+    color: var(--primary-color); /* Título do projeto em roxo */
     font-size: 1.6rem;
     margin-bottom: 1rem;
 }
 
 .project-card p {
-    color: var(--text-color);
+    color: var(--text-color); /* Texto da descrição do projeto em preto */
     font-weight: normal;
     margin-bottom: 0.5rem;
     flex-grow: 1;
@@ -400,7 +400,7 @@ section h2::after {
 }
 
 .btn-project:hover {
-    background-color: #5a0a9d;
+    background-color: #7a3bb0; /* Versão mais escura do roxo */
     transform: translateY(-3px);
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
@@ -492,13 +492,13 @@ footer {
         padding: 1.5rem;
         margin: 1rem auto;
     }
-    
+
     .profile-container {
         flex-direction: column;
         text-align: center;
         padding: 1.5rem;
         gap: 1.5rem;
-        max-width: 95%; /* Ajusta para telas menores */
+        max-width: 95%;
     }
 
     .profile-image {
