@@ -87,19 +87,26 @@ header nav {
     font-weight: bold;
 }
 
-/* Hero Section (agora é .profile-container estilizado diretamente) */
-.hero-section { /* Nova classe para o profile-container na seção hero */
-    padding: 4rem 3rem; /* Ajuste o padding se necessário */
-    max-width: 1200px;
+/* Hero Section (A wrapper para dar o espaçamento da seção) */
+.hero-section-wrapper {
+    padding: 4rem 0; /* Padding superior e inferior para a área da seção */
     margin: 2rem auto; /* Margem da seção, igual às outras */
+    max-width: 1200px; /* Largura máxima da seção */
+    box-sizing: border-box; /* Inclui padding na largura total */
+}
+
+/* O verdadeiro "quadro" branco que aparece é o .profile-container */
+.profile-container {
     background-color: var(--section-bg);
     border-radius: 20px;
     box-shadow: 0 4px 20px var(--shadow-color);
+    padding: 3rem; /* Padding interno do quadro */
     display: flex;
     align-items: center;
     gap: 3rem;
     flex-direction: row; /* Foto à esquerda */
     text-align: left;
+    height: auto; /* Ajusta a altura automaticamente */
 }
 
 .profile-image {
@@ -181,7 +188,7 @@ header nav {
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* General Section Styling */
+/* General Section Styling (Aplicado a todas as <section>) */
 section {
     max-width: 1200px;
     margin: 2rem auto;
@@ -189,6 +196,7 @@ section {
     border-radius: 20px;
     box-shadow: 0 4px 20px var(--shadow-color);
     padding: 3rem;
+    box-sizing: border-box; /* Inclui padding e borda na largura total */
 }
 
 section h2 {
@@ -211,14 +219,14 @@ section h2::after {
     border-radius: 2px;
 }
 
-/* Education Section */
+/* Education Card (Quadro interno da formação acadêmica) */
 .education-card {
-    background-color: #fdfdff;
+    background-color: #fdfdff; /* Um branco mais sutil que o do section-bg */
     border-left: 5px solid var(--primary-color);
     padding: 1.5rem;
     margin-bottom: 1.5rem;
     border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); /* Sombra mais leve para o quadro interno */
     text-align: left;
 }
 
