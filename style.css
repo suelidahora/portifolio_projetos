@@ -104,7 +104,7 @@ header nav {
 
 /* Hero Section (O "quadro maior" branco) */
 .hero {
-    max-width: 960px; /* Largura MÁXIMA do quadro maior */
+    max-width: 1200px; /* Largura máxima da seção */
     margin: 2rem auto; /* Centraliza a seção e dá margem vertical */
     padding: 48px; /* Padding interno do quadro maior (Exato do seu print) */
     background-color: var(--section-bg); /* Fundo branco do quadro maior */
@@ -128,7 +128,7 @@ header nav {
     flex-direction: row; /* Foto à esquerda */
     text-align: left;
     height: auto;
-    max-width: 760px; /* Largura MÁXIMA do quadro menor (Exato do seu print) */
+    max-width: 705px; /* Largura MÁXIMA do quadro menor (Exato do seu print, ajustado pelo padding) */
     margin: 0 auto; /* Centraliza o quadro menor dentro do maior */
     box-sizing: border-box;
 }
