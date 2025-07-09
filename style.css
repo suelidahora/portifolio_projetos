@@ -18,6 +18,7 @@ body {
     background-color: var(--background-color); /* Fundo da página agora é rosa claro */
     color: var(--text-color);
     line-height: 1.6; /* Line-height padrão para o corpo do texto */
+    font-size: 1rem; /* Tamanho padrão da fonte */
 }
 
 .container {
@@ -177,7 +178,6 @@ header nav {
     left: 0;
     border-radius: 2px;
 }
-
 
 .welcome-text p {
     font-size: 1rem; /* Padronizado para 1rem */
@@ -568,3 +568,4 @@ footer {
         padding: 0.4rem 0.8rem;
     }
 }
+\`\`\`
