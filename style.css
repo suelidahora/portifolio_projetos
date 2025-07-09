@@ -102,8 +102,8 @@ header nav {
     font-weight: bold;
 }
 
-/* Hero Section SIMPLIFICADA (Um único quadro branco grande) */
-.hero-simplified {
+/* Hero Section (Um único quadro branco grande) */
+.hero { /* Aqui era section.hero */
     max-width: 1200px; /* Largura máxima do quadro */
     margin: 2rem auto; /* Centraliza e dá margem vertical */
     padding: 3rem; /* Padding interno */
@@ -116,7 +116,7 @@ header nav {
     align-items: center; /* Alinha verticalmente */
 }
 
-.profile-content-simplified {
+.profile-container { /* Renomeado para profile-content-simplified no HTML, mas aqui é como estava na versão estável */
     display: flex;
     align-items: center;
     gap: 2rem; /* Espaçamento entre foto e texto */
@@ -139,18 +139,18 @@ header nav {
     flex-shrink: 0;
 }
 
-.welcome-text-simplified {
+.welcome-text { /* Renomeado para welcome-text-simplified no HTML */
     flex-grow: 1;
 }
 
-.welcome-text-simplified h1 {
+.welcome-text h1 {
     color: var(--primary-color);
     font-size: 2.5rem;
     margin-bottom: 0.5rem;
 }
 
 /* Alinhamento e linha rosa completa para "Analista de Dados & Business Intelligence" */
-.welcome-text-simplified h2 {
+.welcome-text h2 {
     color: var(--secondary-color);
     font-size: 1.6rem;
     margin-top: 0;
@@ -162,7 +162,7 @@ header nav {
     margin-right: 0;
 }
 
-.welcome-text-simplified h2::after {
+.welcome-text h2::after {
     content: '';
     width: 100%; /* Linha completa */
     height: 4px;
@@ -174,7 +174,7 @@ header nav {
 }
 
 
-.welcome-text-simplified p {
+.welcome-text p {
     font-size: 1.05rem;
     margin-bottom: 1.5rem;
     color: var(--text-color);
@@ -210,7 +210,7 @@ header nav {
 }
 
 .btn-primary:hover {
-    background-color: #7a3bb0;
+    background-color: #7a3bb0; /* Versão mais escura do roxo */
     transform: translateY(-3px);
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
@@ -221,7 +221,7 @@ header nav {
 }
 
 .btn-secondary:hover {
-    background-color: #d65581;
+    background-color: #d65581; /* Versão mais escura do rosa */
     transform: translateY(-3px);
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
