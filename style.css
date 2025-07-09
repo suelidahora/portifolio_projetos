@@ -4,8 +4,8 @@
     --secondary-color: #ff69b4; /* Rosa vibrante */
     --accent-color: #ffd700; /* Dourado para destaque */
     --text-color: #333; /* Cor de texto padrão (quase preto) */
-    --background-color: #f8f8f8; /* Fundo claro da página */
-    --section-bg: #ffffff; /* Fundo das seções */
+    --background-color: #fff0f5; /* Fundo Rosa muito claro (Lavender Blush) */
+    --section-bg: #ffffff; /* Fundo das seções (branco) */
     --shadow-color: rgba(0, 0, 0, 0.1); /* Cor da sombra */
 }
 
@@ -15,7 +15,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: var(--background-color);
+    background-color: var(--background-color); /* Fundo da página agora é rosa claro */
     color: var(--text-color);
     line-height: 1.6;
 }
@@ -87,28 +87,29 @@ header nav {
     font-weight: bold;
 }
 
-/* Hero Section (O "quadro maior" sutil) */
+/* Hero Section (O "quadro maior" sutil de espaçamento) */
 .hero {
     padding: 4rem 0; /* Padding superior e inferior para a área da seção */
     max-width: 1200px;
     margin: 2rem auto; /* Margem da seção, igual às outras */
     box-sizing: border-box; /* Inclui padding na largura total */
-    /* Removendo background e shadow daqui para o profile-container ter o destaque */
+    /* NÃO tem background-color ou box-shadow aqui, isso é para o .profile-container */
 }
 
-/* O verdadeiro "quadro" branco que aparece é o .profile-container */
+/* O verdadeiro "quadro" branco e visível */
 .profile-container {
-    background-color: var(--section-bg); /* Fundo branco do quadro interno */
+    background-color: var(--section-bg); /* Fundo branco do quadro */
     border-radius: 20px;
-    box-shadow: 0 4px 20px var(--shadow-color); /* Sombra do quadro interno */
+    box-shadow: 0 4px 20px var(--shadow-color); /* Sombra do quadro */
     padding: 3rem; /* Padding interno do quadro */
     display: flex;
     align-items: center;
     gap: 3rem;
     flex-direction: row; /* Foto à esquerda */
     text-align: left;
-    height: auto; /* Ajusta a altura automaticamente */
-    box-sizing: border-box; /* Inclui padding na largura total */
+    height: auto;
+    box-sizing: border-box;
+    width: 100%; /* Garante que ocupe a largura total disponível */
 }
 
 .profile-image {
@@ -131,14 +132,18 @@ header nav {
     margin-bottom: 0.5rem;
 }
 
-/* Linha rosa completa para o h2 da Hero Section */
+/* Alinhamento de "Analista de Dados & Business Intelligence" e sua linha rosa */
 .welcome-text h2 {
     color: var(--secondary-color);
     font-size: 1.8rem;
     margin-top: 0;
-    margin-bottom: 1.5rem;
-    position: relative; /* Necessário para posicionar o ::after */
+    margin-bottom: 1.5rem; /* Espaço abaixo do h2 */
+    position: relative;
     padding-bottom: 0.5rem; /* Espaço para a linha */
+    /* Remove text-align: center se houver */
+    /* Garante que o h2 não tenha margem lateral */
+    margin-left: 0; 
+    margin-right: 0;
 }
 
 .welcome-text h2::after {
@@ -147,7 +152,7 @@ header nav {
     height: 4px;
     background-color: var(--secondary-color); /* Linha rosa */
     position: absolute;
-    bottom: 0; /* Alinha na parte de baixo do padding */
+    bottom: 0;
     left: 0;
     border-radius: 2px;
 }
@@ -221,42 +226,42 @@ section h2 {
     color: var(--primary-color);
     font-size: 2.5rem;
     margin-bottom: 3rem;
-    position: relative; /* Necessário para posicionar o ::after */
-    padding-bottom: 0.5rem; /* Espaço para a linha */
+    position: relative;
+    padding-bottom: 0.5rem;
 }
 
 section h2::after {
     content: '';
     width: 100%; /* Linha completa */
     height: 4px;
-    background-color: var(--secondary-color); /* Linha rosa */
+    background-color: var(--secondary-color);
     position: absolute;
-    bottom: 0; /* Alinha na parte de baixo do padding */
+    bottom: 0;
     left: 0;
     border-radius: 2px;
 }
 
 /* Education Card (Quadro interno da formação acadêmica) */
 .education-card {
-    background-color: #fdfdff; /* Um branco mais sutil que o do section-bg */
+    background-color: #fdfdff;
     border-left: 5px solid var(--primary-color);
     padding: 1.5rem;
     margin-bottom: 1.5rem;
     border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); /* Sombra mais leve para o quadro interno */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
     text-align: left;
 }
 
 .education-card .course {
     font-size: 1.4rem;
     font-weight: bold;
-    color: var(--primary-color); /* AGORA ESTÁ ROXO! */
+    color: var(--primary-color); /* Título do curso em roxo */
     margin-bottom: 0.5rem;
 }
 
 .education-card .institution {
     font-size: 1.1rem;
-    color: var(--secondary-color); /* AGORA ESTÁ ROSA! */
+    color: var(--secondary-color); /* Instituição em rosa */
     margin-bottom: 0.3rem;
 }
 
@@ -345,13 +350,13 @@ section h2::after {
 }
 
 .project-card h3 {
-    color: var(--primary-color); /* Título do projeto em roxo */
+    color: var(--primary-color);
     font-size: 1.6rem;
     margin-bottom: 1rem;
 }
 
 .project-card p {
-    color: var(--text-color); /* Texto da descrição do projeto em preto */
+    color: var(--text-color);
     font-weight: normal;
     margin-bottom: 0.5rem;
     flex-grow: 1;
@@ -370,7 +375,7 @@ section h2::after {
     display: flex;
     flex-direction: column;
     gap: 0.8rem;
-    padding-top: 1rem; /* Espaço entre o texto e o botão */
+    padding-top: 1rem;
 }
 
 .btn-project {
