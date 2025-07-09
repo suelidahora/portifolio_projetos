@@ -320,14 +320,14 @@ section h2::after {
 
 .project-card h3 {
     color: var(--primary-color); /* Título do projeto em roxo */
-    font-size: 1.6rem;
+    font-size: 1.6rem; /* Tamanho da fonte igual aos outros h3 de card */
     margin-bottom: 1rem;
 }
 
 .project-card p {
     color: var(--text-color); /* Texto da descrição do projeto em preto */
     font-weight: normal;
-    margin-bottom: 1rem;
+    margin-bottom: 1rem; /* Espaço entre o texto e as ferramentas/botões */
     flex-grow: 1; /* Permite que o parágrafo ocupe o espaço */
 }
 
@@ -335,9 +335,10 @@ section h2::after {
     font-weight: 600;
     color: var(--primary-color); /* Roxo para as ferramentas */
     font-size: 0.95em;
-    margin-top: 1rem;
-    margin-bottom: 1.5rem;
+    margin-top: 0.5rem; /* Menor espaço se o texto da descrição não tiver muito */
+    margin-bottom: 1.5rem; /* Espaço abaixo das ferramentas antes dos botões */
 }
+
 
 .project-links {
     margin-top: auto; /* Empurra os links para o final do card */
