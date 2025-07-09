@@ -1,220 +1,526 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sueli da Hora - Data Analyst</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-</head>
-<body>
-    <header>
-        <nav class="social-links">
-            <a href="https://linkedin.com/in/sueli-da-hora/"  title="LinkedIn">
-                <i class="fab fa-linkedin"></i>
-            </a>
-            <a href="https://github.com/SueliHora"  title="GitHub">
-                <i class="fab fa-github"></i>
-            </a>
-                        
-            <a href="https://medium.com/@suelidahoramoreira"  title="Medium">
-                <i class="fab fa-medium"></i>
-            </a>
-            <a href="https://wa.me/5511992077787"  title="WhatsApp">
-                <i class="fab fa-whatsapp"></i>
-            </a>
-            <a href="mailto:s.horamoreira@gmail.com" title="Email">
-                <i class="fas fa-envelope"></i>
-            </a>
-        </nav>
-        <div class="language-selector">
-            <button class="btn btn-language" onclick="changeLanguage('pt')">PT</button>
-            <button class="btn btn-language active" onclick="changeLanguage('en')">EN</button>
-        </div>
-    </header>
+/* Variáveis CSS para cores */
+:root {
+    --primary-color: #6a0dad; /* Roxo principal */
+    --secondary-color: #ff69b4; /* Rosa vibrante */
+    --accent-color: #ffd700; /* Dourado para destaque */
+    --text-color: #333; /* Cor de texto padrão (quase preto) */
+    --background-color: #f8f8f8; /* Fundo claro da página */
+    --section-bg: #ffffff; /* Fundo das seções */
+    --shadow-color: rgba(0, 0, 0, 0.1); /* Cor da sombra */
+}
 
-    <main>
-        <section class="hero">
-            <div class="profile-container">
-                <img src="https://raw.githubusercontent.com/suelidahora/portifolio_projetos/main/FotoSu2.jpg" alt="Sueli da Hora" class="profile-image">
-                <div class="welcome-text">
-                    <h1>Sueli da Hora</h1>
-                    <h2>Data Analyst</h2>
-                    <p>Hello! Welcome to my portfolio as a Data Analyst.
+/* Reset básico e estilos globais */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
 
-I hold a degree in Information Systems and a Technical degree in Data Processing, and I am currently pursuing an MBA in Technology for Business with Data and AI at PUC-RS. My education equips me to apply data analysis and artificial intelligence techniques to support strategic decisions and foster business innovation.
-Here, I present my skills and data science projects, highlighting my work with public data and technical competencies. For more details, download my full resume or contact me through social networks.
-     </p>
-                    <div class="cta-buttons">
-                        <a href="https://github.com/suelidahora/portifolio_projetos/raw/main/CV-En.pdf"  class="btn btn-primary">
-                            <i class="fas fa-download"></i> Download CV
-                        </a>
-                        <a href="mailto:s.horamoreira@gmail.com" class="btn btn-secondary">
-                            <i class="fas fa-envelope"></i> Contact
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
 
-        <section class="education">
-    <h2>Education</h2>
-    <div class="education-card">
-        <p class="course">MBA in Technology for Business with Data and AI</p>
-        <p class="institution">PUC-RS</p>
-        <p class="period">Jun 2024 - Dec 2025</p>
-    </div>
+/* Header */
+header {
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px var(--shadow-color);
+}
 
-    <div class="education-card">
-        <p class="course">Bachelor in Information Systems</p>
-        <p class="institution">Universidade Radial</p>
-        <p class="period"> Dec 2002</p>
-    </div>
-</section>
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
 
-        <section class="experience">
-            <h2>Professional Experience</h2>
-            <div class="experience-grid">
-                <div class="experience-card">
-                    <h3>Data & AI Analyst (Remote) - Volunteer</h3>
-                    <p class="company">Pymentech Solutions</p>
-                    <p class="period">Jul 2024 - Present</p>
-                    <p class="location">Volunteer project focused on data analysis and AI automation to optimize e-commerce operations.
-                    </p>
-                </div>
-                <div class="experience-card">
-                    <h3>Financial Analyst (Hybrid) </h3>
-                    <p class="company">FTD Educação</p>
-                    <p class="period">Jan 2016 - Jun 2024</p>
-                    <p class="location">Specialization in control and creation of dashboards for payment analysis of royalties and financial exchange.
-                     </p>
+.social-links a {
+    color: white;
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+    background-color: transparent;
+    box-shadow: none;
+    margin: 0 5px; /* Espaçamento entre os ícones */
+}
 
-                </div>
-                <div class="experience-card">
-                    <h3>Senior Financial Analyst (On-site) </h3>
-                    <p class="company">Insper</p>
-                    <p class="period">Sep 2009 - Nov 2011</p>
-                    <p class="location"> Leadership in financial analysis and management of investments, financial exchange, and royalties.  </p>
+.social-links a:hover {
+    color: var(--accent-color);
+    transform: translateY(-2px);
+    background-color: rgba(255, 255, 255, 0.2);
+}
 
-                </div>
-                <div class="experience-card">
-                    <h3>Financial Analyst (On-site)</h3>
-                    <p class="company">Grupo Marista-ABEC</p>
-                    <p class="period">Mar 1998 - Oct 2007</p>
-                    <p class="location"> Development of analytical skills in treasury management and accounts payable. </p>
-                </div>
-            </div>
-        </section>
+.language-selector button {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-left: 0.5rem;
+}
 
-        <section class="projects">
-            <h2>Projects</h2>
-            <div class="projects-grid">
-                <div class="project-category">
-                    <h3>AI Projects</h3>
-                    <div class="project-cards">
-                        <!-- Add your AI projects here -->
-		 <p class="company">Webapp with multiple chatbots</p>
-                    </div>
-                </div>
-                <div class="project-category">
-                    <h3>Python Projects</h3>
-                    <div class="project-cards">
-                        <!-- Add your Python projects here -->
-                        <p class="company">Interactive Dashboards with Python</p>
-			    		    
-                    </div>
-                </div>
-                <div class="project-category">
-                    <h3>Data Projects</h3>
- 		    <div class="project-cards">
-                        <!-- Add your Data projects here -->
-		 <p class="company">Client Risk Classification System </p>
-                    </div>
-                </div>
-            </div>
-        </section>
+.language-selector button:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+}
 
-        <section class="skills">
-            <h2>Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3><i class="fas fa-code"></i> Programming Languages and Databases</h3>
-                    <ul>
-                        <li>Python: Focus on data analysis and web scraping.</li>
-                        <li>SQL: Data extraction and manipulation.</li>
-                        <li>Environments and Tools: Google Colab, Jupyter Notebook, Pandas Profiling.</li>
+.language-selector button.active {
+    background-color: white;
+    color: var(--primary-color);
+    font-weight: bold;
+}
 
-                    </ul>
-                </div>
+/* Hero Section (O "quadro maior" sutil) */
+.hero {
+    padding: 4rem 0; /* Padding superior e inferior para a área da seção */
+    max-width: 1200px;
+    margin: 2rem auto; /* Margem da seção, igual às outras */
+    box-sizing: border-box; /* Inclui padding na largura total */
+    /* Removendo background e shadow daqui para o profile-container ter o destaque */
+}
 
-                <div class="skill-category">
-                    <h3><i class="fas fa-chart-bar"></i> Data Visualization</h3>
-                    <ul>
-                        <li>Tools: Seaborn, Power BI, Looker.</li>
-                        <li>Graphical Analysis: Data dispersion and DataViz.</li>
-                    </ul>
-                </div>
+/* O verdadeiro "quadro" branco que aparece é o .profile-container */
+.profile-container {
+    background-color: var(--section-bg); /* Fundo branco do quadro interno */
+    border-radius: 20px;
+    box-shadow: 0 4px 20px var(--shadow-color); /* Sombra do quadro interno */
+    padding: 3rem; /* Padding interno do quadro */
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    flex-direction: row; /* Foto à esquerda */
+    text-align: left;
+    height: auto; /* Ajusta a altura automaticamente */
+    box-sizing: border-box; /* Inclui padding na largura total */
+}
 
-                <div class="skill-category">
-                    <h3><i class="fas fa-brain"></i> Statistics and Machine Learning</h3>
-                    <ul>
-                        <li>Statistics: Descriptive statistics.</li>
-                        <li>Algorithms: Regression, classification, clustering, "learn to rank", Naive Bayes, decision trees, Ensemble Learning.</li>
-                        <li>Techniques: Supervised and unsupervised learning, data balancing techniques.</li>
-                        <li>Metrics: Algorithm performance.</li>
-			            <li>Libraries: Sklearn, Scipy, Numpy.</li>
-                        <li>Deep Learning: TensorFlow, PyTorch, CNN, RNN, Transformers, Machine Cluster and DL.</li>
-                    </ul>
-                </div>
+.profile-image {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid var(--primary-color);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    flex-shrink: 0;
+}
 
-                <div class="skill-category">
-                    <h3><i class="fas fa-laptop-code"></i> Software Engineering</h3>
-                    <ul>
-                        <li>Development: Cookiecutter, Virtual Environment.</li>
-                        <li>Version Control: Git, Github.</li>
-                        <li>Containers and Virtualization: Docker.</li>
-                        <li>Frameworks and APIs: Streamlit, Flask, Python APIs.</li>
-                        <li>Infrastructure: AWS Amazon, Google Cloud Platform (GCP), Azure.</li>
-                        <li>Automation: PyAutoGui.</li>
-                        <li>AI integration API.</li>
-                    </ul>
-                </div>
+.welcome-text {
+    flex-grow: 1;
+}
 
-                <div class="skill-category">
-                    <h3><i class="fas fa-robot"></i> Artificial Intelligence</h3>
-                    <ul>
-                        <li>Tools and Techniques: Prompt Engineering, Orange Canvas, CrewAI.</li>
-                        <li>Computer Vision: OpenCV.</li>
-                        <li>Platforms: Hugging Face, LangChain.</li>
-                    </ul>
-                </div>
+.welcome-text h1 {
+    color: var(--primary-color);
+    font-size: 2.8rem;
+    margin-bottom: 0.5rem;
+}
 
-                <div class="skill-category">
-                    <h3><i class="fas fa-tasks"></i> Methodology and Tools</h3>
-                    <ul>
-                         <li>Design: UX/UI, Figma, HTML, CSS for dashboard creation. </li>    
-                        <li>Agile Methods: Kanban, Scrum, Notion, Trello, Jira, GLPI.</li>
-                        <li>Rapid Development: Low-code and no-code tools. </li>
-                        <li>Data Analysis: Exploratory Data Analysis with Anaconda Python.</li>
-                        <li>Cross-Functional Skills: Financial and data analysis skills.</li>
+.welcome-text h2 {
+    color: var(--secondary-color);
+    font-size: 1.8rem;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+}
 
-                    </ul>
-                </div>
-            </div>
-        </section>
-    </main>
+.welcome-text p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-color);
+}
 
-    <footer>
-        <div class="footer-content">
-            <p>© 2024 Sueli da Hora - Data Analyst</p>
-            <div class="contact-info">
-                <a href="mailto:s.horamoreira@gmail.com"><i class="fas fa-envelope"></i> s.horamoreira@gmail.com</a>
-                <a href="tel:+5511992077787"><i class="fas fa-phone"></i> +55 11 99207-7787</a>
-                <a href="https://wa.me/5511992077787"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-            </div>
-        </div>
-    </footer>
+.cta-buttons {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: flex-start;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
 
-    <script src="script.js"></script>
-</body>
-</html>
+.btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.8rem 1.8rem;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.btn i {
+    margin-right: 0.8rem;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #5a0a9d;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn-secondary {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+.btn-secondary:hover {
+    background-color: #e55a9d;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* General Section Styling (Aplicado a todas as <section>) */
+section {
+    max-width: 1200px;
+    margin: 2rem auto;
+    background-color: var(--section-bg);
+    border-radius: 20px;
+    box-shadow: 0 4px 20px var(--shadow-color);
+    padding: 3rem;
+    box-sizing: border-box;
+}
+
+section h2 {
+    text-align: center;
+    color: var(--primary-color);
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+section h2::after {
+    content: '';
+    width: 80px;
+    height: 4px;
+    background-color: var(--secondary-color);
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2px;
+}
+
+/* Education Card (Quadro interno da formação acadêmica) */
+.education-card {
+    background-color: #fdfdff; /* Um branco mais sutil que o do section-bg */
+    border-left: 5px solid var(--primary-color);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); /* Sombra mais leve para o quadro interno */
+    text-align: left;
+}
+
+.education-card .course {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: var(--secondary-color); /* AGORA ESTÁ ROSA! */
+    margin-bottom: 0.5rem;
+}
+
+.education-card .institution {
+    font-size: 1.1rem;
+    color: var(--text-color);
+    margin-bottom: 0.3rem;
+}
+
+.education-card .period {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 0.8rem;
+}
+
+.education-card p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Experience Section */
+.experience-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.experience-card {
+    background-color: #fdfdff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    text-align: left;
+    border-top: 5px solid var(--secondary-color);
+}
+
+.experience-card h3 {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.experience-card .company {
+    font-weight: bold;
+    color: var(--text-color);
+    margin-bottom: 0.3rem;
+}
+
+.experience-card .period, .experience-card .location {
+    font-size: 0.95rem;
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.experience-card p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Projects Section */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+}
+
+.project-card {
+    background-color: #fdfdff;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.project-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.project-card .card-content {
+    padding-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.project-card h3 {
+    color: var(--primary-color); /* Título do projeto em roxo */
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+}
+
+.project-card p {
+    color: var(--text-color); /* Texto da descrição do projeto em preto */
+    font-weight: normal;
+    margin-bottom: 0.5rem;
+    flex-grow: 1;
+}
+
+.project-card p.tools {
+    font-weight: 600;
+    color: var(--primary-color);
+    font-size: 0.95em;
+    margin-top: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.project-links {
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    padding-top: 1rem; /* Espaço entre o texto e o botão */
+}
+
+.btn-project {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.95rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    width: calc(100% - 10px);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.btn-project:hover {
+    background-color: #5a0a9d;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Skills Section */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.skill-category {
+    background-color: #fdfdff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    text-align: left;
+    border-bottom: 5px solid var(--primary-color);
+}
+
+.skill-category h3 {
+    color: var(--primary-color);
+    font-size: 1.6rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.skill-category h3 i {
+    margin-right: 1rem;
+    color: var(--secondary-color);
+    font-size: 1.8rem;
+}
+
+.skill-category ul {
+    list-style: none;
+    padding: 0;
+}
+
+.skill-category ul li {
+    background-color: #eee;
+    padding: 0.6rem 1rem;
+    margin-bottom: 0.8rem;
+    border-radius: 5px;
+    color: var(--text-color);
+    font-size: 1rem;
+    transition: background-color 0.2s ease;
+}
+
+.skill-category ul li:hover {
+    background-color: #ddd;
+}
+
+/* Footer */
+footer {
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
+    margin-top: 4rem;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-content p {
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+}
+
+.footer-content .contact-info a {
+    color: white;
+    font-size: 1.5rem;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.contact-info a:hover {
+    color: var(--accent-color);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .hero {
+        padding: 2rem; /* Reduz padding em telas menores */
+        margin: 1rem auto; /* Ajusta margem */
+    }
+    
+    .profile-container {
+        flex-direction: column;
+        text-align: center;
+        padding: 2rem;
+        gap: 2rem;
+    }
+
+    .profile-image {
+        width: 180px;
+        height: 180px;
+    }
+
+    .welcome-text h1 {
+        font-size: 2rem;
+    }
+
+    .welcome-text h2 {
+        font-size: 1.4rem;
+    }
+
+    .cta-buttons {
+        justify-content: center;
+    }
+
+    section { /* Aplicado a todas as sections */
+        padding: 2rem;
+        margin: 1rem auto;
+    }
+
+    section h2 {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .projects-grid, .experience-grid, .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-card img {
+        height: 180px;
+    }
+}
+
+@media (max-width: 480px) {
+    .language-selector {
+        width: 100%;
+        margin-top: 1rem;
+        display: flex;
+        justify-content: center;
+    }
+
+    .language-selector button {
+        padding: 0.4rem 0.8rem;
+    }
+}
