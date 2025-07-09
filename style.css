@@ -87,24 +87,19 @@ header nav {
     font-weight: bold;
 }
 
-/* Hero Section */
-.hero {
-    padding: 4rem 0;
-    text-align: center;
-}
-
-.profile-container {
+/* Hero Section (agora é .profile-container estilizado diretamente) */
+.hero-section { /* Nova classe para o profile-container na seção hero */
+    padding: 4rem 3rem; /* Ajuste o padding se necessário */
+    max-width: 1200px;
+    margin: 2rem auto; /* Margem da seção, igual às outras */
+    background-color: var(--section-bg);
+    border-radius: 20px;
+    box-shadow: 0 4px 20px var(--shadow-color);
     display: flex;
     align-items: center;
     gap: 3rem;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 3rem;
-    background-color: var(--section-bg);
-    border-radius: 20px;
-    box-shadow: 0 4px 20px var(--shadow-color); /* Sombra padrão */
     flex-direction: row; /* Foto à esquerda */
-    text-align: left; /* Alinha o texto à esquerda */
+    text-align: left;
 }
 
 .profile-image {
@@ -114,11 +109,11 @@ header nav {
     object-fit: cover;
     border: 5px solid var(--primary-color);
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-    flex-shrink: 0; /* Evita que a imagem encolha */
+    flex-shrink: 0;
 }
 
 .welcome-text {
-    flex-grow: 1; /* Permite que o texto ocupe o espaço restante */
+    flex-grow: 1;
 }
 
 .welcome-text h1 {
@@ -143,7 +138,7 @@ header nav {
 .cta-buttons {
     margin-top: 2rem;
     display: flex;
-    justify-content: flex-start; /* Alinha os botões à esquerda */
+    justify-content: flex-start;
     gap: 1rem;
     flex-wrap: wrap;
 }
@@ -170,7 +165,7 @@ header nav {
 }
 
 .btn-primary:hover {
-    background-color: #5a0a9d; /* Tom mais escuro do roxo */
+    background-color: #5a0a9d;
     transform: translateY(-3px);
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
@@ -181,14 +176,13 @@ header nav {
 }
 
 .btn-secondary:hover {
-    background-color: #e55a9d; /* Tom mais escuro do rosa */
+    background-color: #e55a9d;
     transform: translateY(-3px);
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* Sections (Education, Experience, Projects, Skills) */
+/* General Section Styling */
 section {
-    padding: 4rem 0;
     max-width: 1200px;
     margin: 2rem auto;
     background-color: var(--section-bg);
@@ -294,8 +288,8 @@ section h2::after {
 /* Projects Section */
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* Garante responsividade e tamanho mínimo */
-    gap: 2rem; /* Espaçamento entre os cards */
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
 }
 
 .project-card {
@@ -306,57 +300,56 @@ section h2::after {
     text-align: center;
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Garante que o conteúdo e botões fiquem bem distribuídos */
+    justify-content: space-between;
 }
 
 .project-card img {
     width: 100%;
-    height: 200px; /* Altura fixa para as imagens dos cards */
-    object-fit: cover; /* Garante que a imagem preencha o espaço sem distorcer */
-    border-radius: 8px; /* Borda arredondada para combinar */
-    margin-bottom: 1.5rem; /* Espaço abaixo da imagem */
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .project-card .card-content {
-    padding-bottom: 0; /* Remove padding extra na parte inferior do conteúdo do card */
+    padding-bottom: 0;
     display: flex;
     flex-direction: column;
-    flex-grow: 1; /* Permite que o conteúdo cresça */
+    flex-grow: 1;
 }
 
 .project-card h3 {
     color: var(--primary-color); /* Título do projeto em roxo */
-    font-size: 1.6rem; /* Tamanho da fonte igual aos outros h3 de card */
-    margin-bottom: 1rem; /* Espaço abaixo do título */
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
 }
 
 .project-card p {
     color: var(--text-color); /* Texto da descrição do projeto em preto */
     font-weight: normal;
-    margin-bottom: 0.5rem; /* Espaço reduzido entre o texto e as ferramentas */
-    flex-grow: 1; /* Permite que o parágrafo ocupe o espaço */
+    margin-bottom: 0.5rem;
+    flex-grow: 1;
 }
 
 .project-card p.tools {
     font-weight: 600;
-    color: var(--primary-color); /* Roxo para as ferramentas */
+    color: var(--primary-color);
     font-size: 0.95em;
-    margin-top: 0.5rem; /* Menor espaço se o texto da descrição não tiver muito */
-    margin-bottom: 1.5rem; /* Espaço abaixo das ferramentas antes dos botões */
+    margin-top: 0.5rem;
+    margin-bottom: 1.5rem;
 }
 
-
 .project-links {
-    margin-top: auto; /* Empurra os links para o final do card */
+    margin-top: auto;
     display: flex;
-    flex-direction: column; /* Botões um abaixo do outro */
+    flex-direction: column;
     gap: 0.8rem;
-    padding-top: 1rem; /* ESPAÇO ENTRE O TEXTO E O BOTÃO */
+    padding-top: 1rem; /* Espaço entre o texto e o botão */
 }
 
 .btn-project {
-    background-color: var(--primary-color); /* Botão de projeto com a cor primária (roxo) */
+    background-color: var(--primary-color);
     color: white;
     padding: 0.8rem 1.5rem;
     border-radius: 30px;
@@ -364,16 +357,16 @@ section h2::after {
     font-weight: bold;
     font-size: 0.95rem;
     transition: background-color 0.3s ease, transform 0.3s ease;
-    width: calc(100% - 10px); /* Ocupa quase toda a largura do card */
+    width: calc(100% - 10px);
     text-align: center;
-    display: flex; /* Para centralizar o ícone e texto */
+    display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0 auto; /* Centraliza o botão */
+    margin: 0 auto;
 }
 
 .btn-project:hover {
-    background-color: #5a0a9d; /* Hover mais escuro do roxo */
+    background-color: #5a0a9d;
     transform: translateY(-3px);
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
@@ -461,8 +454,8 @@ footer {
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
-    .profile-container {
-        flex-direction: column; /* Volta para coluna em telas menores */
+    .hero-section {
+        flex-direction: column;
         text-align: center;
         padding: 2rem;
         gap: 2rem;
@@ -482,7 +475,7 @@ footer {
     }
 
     .cta-buttons {
-        justify-content: center; /* Centraliza botões em telas menores */
+        justify-content: center;
     }
 
     section {
@@ -496,11 +489,11 @@ footer {
     }
 
     .projects-grid, .experience-grid, .skills-grid {
-        grid-template-columns: 1fr; /* Uma coluna em telas menores */
+        grid-template-columns: 1fr;
     }
 
     .project-card img {
-        height: 180px; /* Ajuste para altura da imagem em telas menores */
+        height: 180px;
     }
 }
 
