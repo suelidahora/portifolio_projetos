@@ -11,13 +11,14 @@
 
 /* Reset básico e estilos globais */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* FONTE CORRIGIDA! */
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     background-color: var(--background-color); /* Fundo da página agora é rosa claro */
     color: var(--text-color);
-    line-height: 1.6;
+    line-height: 1.6; /* Line-height padrão para o corpo do texto */
+    font-size: 1rem; /* Tamanho padrão da fonte */
 }
 
 .container {
@@ -41,7 +42,7 @@ header {
 
 header nav {
     display: flex;
-    justify-content: center; /* Centraliza o conteúdo (ícones sociais) */
+    justify-content: space-between; /* Ícones sociais à esquerda, idiomas à direita */
     align-items: center;
     flex-wrap: wrap;
     max-width: 1200px; /* Alinha o conteúdo da nav com o container principal */
@@ -53,7 +54,6 @@ header nav {
     display: flex;
     align-items: center;
     gap: 1rem; /* Espaçamento entre os ícones */
-    /* Este elemento agora estará centralizado pelo justify-content: center do nav */
 }
 
 .social-links a {
@@ -81,8 +81,6 @@ header nav {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    margin-left: auto; /* Empurra o seletor de idioma para a direita */
-    padding-left: 1rem; /* Espaço entre os ícones sociais e o seletor de idioma */
 }
 
 .btn-language {
@@ -105,39 +103,35 @@ header nav {
     font-weight: bold;
 }
 
-/* Hero Section (O "quadro maior" branco) */
-.hero {
-    max-width: 1200px; /* Largura máxima da seção */
-    margin: 2rem auto; /* Centraliza a seção e dá margem vertical */
-    padding: 48px; /* Padding interno do quadro maior (Exato do seu print) */
-    background-color: var(--section-bg); /* Fundo branco do quadro maior */
+/* Hero Section (Um único quadro branco grande) */
+.hero { /* Aqui era section.hero */
+    max-width: 1200px; /* Largura máxima do quadro */
+    margin: 2rem auto; /* Centraliza e dá margem vertical */
+    padding: 3rem; /* Padding interno */
+    background-color: var(--section-bg); /* Fundo branco */
     border-radius: 20px;
-    box-shadow: 0 4px 20px var(--shadow-color); /* Sombra do quadro maior */
+    box-shadow: 0 4px 20px var(--shadow-color); /* Sombra */
     box-sizing: border-box; /* Inclui padding na largura total */
-    display: flex; /* Para centralizar o quadro interno */
-    justify-content: center; /* Centraliza horizontalmente o quadro menor */
-    align-items: center; /* Centraliza verticalmente o quadro menor */
+    display: flex; /* Para layout de foto e texto */
+    justify-content: center; /* Centraliza o conteúdo (foto+texto) */
+    align-items: center; /* Alinha verticalmente */
 }
 
-/* O .profile-container é o "quadro menor" interno (AGORA COM AS MEDIDAS EXATAS!) */
-.profile-container {
-    background-color: var(--section-bg); /* Fundo branco do quadro menor */
-    border-radius: 15px; /* Bordas um pouco menores para diferenciar */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); /* Sombra mais sutil para o quadro menor */
-    padding: 32px; /* Padding interno do quadro menor (Exato do seu print) */
+.profile-container { /* Renomeado para profile-content-simplified no HTML, mas aqui é como estava na versão estável */
     display: flex;
     align-items: center;
     gap: 2rem; /* Espaçamento entre foto e texto */
     flex-direction: row; /* Foto à esquerda */
     text-align: left;
     height: auto;
-    max-width: 760px; /* Largura MÁXIMA do quadro menor (Exato do seu print) */
-    margin: 0 auto; /* Centraliza o quadro menor dentro do maior */
+    max-width: 900px; /* Largura máxima do conteúdo dentro do quadro simplificado */
+    width: 100%;
     box-sizing: border-box;
+    padding: 0; /* Remover padding extra se existir */
 }
 
 .profile-image {
-    width: 200px; /* Tamanho da foto dentro do quadro menor */
+    width: 200px; /* Tamanho da foto */
     height: 200px;
     border-radius: 50%;
     object-fit: cover;
@@ -146,7 +140,7 @@ header nav {
     flex-shrink: 0;
 }
 
-.welcome-text {
+.welcome-text { /* Renomeado para welcome-text-simplified no HTML */
     flex-grow: 1;
 }
 
@@ -154,9 +148,10 @@ header nav {
     color: var(--primary-color);
     font-size: 2.5rem;
     margin-bottom: 0.5rem;
+    text-align: center; /* Havia sido centralizado aqui, será ajustado depois */
 }
 
-/* Alinhamento de "Analista de Dados & Business Intelligence" e sua linha rosa */
+/* Linha rosa completa para o h2 da Hero Section */
 .welcome-text h2 {
     color: var(--secondary-color);
     font-size: 1.6rem;
@@ -164,9 +159,10 @@ header nav {
     margin-bottom: 1.5rem; /* Espaço abaixo do h2 */
     position: relative;
     padding-bottom: 0.5rem; /* Espaço para a linha */
-    text-align: left; /* Garante alinhamento à esquerda */
-    margin-left: 0;
-    margin-right: 0;
+    text-align: center; /* Havia sido centralizado aqui, será ajustado depois */
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content; /* Faz o H2 ocupar apenas o espaço do texto */
 }
 
 .welcome-text h2::after {
@@ -180,11 +176,11 @@ header nav {
     border-radius: 2px;
 }
 
-
 .welcome-text p {
-    font-size: 1.05rem;
+    font-size: 1rem; /* Padronizado para 1rem */
     margin-bottom: 1.5rem;
     color: var(--text-color);
+    text-align: left; /* Garante alinhamento à esquerda */
 }
 
 .cta-buttons {
@@ -233,7 +229,7 @@ header nav {
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* General Section Styling (Aplicado a todas as <section>) */
+/* General Section Styling (Aplicado a todas as <section> que não são a Hero simplificada) */
 section {
     max-width: 1200px;
     margin: 2rem auto;
@@ -286,6 +282,7 @@ section h2::after {
     font-size: 1.1rem;
     color: var(--secondary-color); /* Instituição em rosa */
     margin-bottom: 0.3rem;
+    font-weight: bold; /* ADICIONADO */
 }
 
 .education-card .period {
@@ -294,8 +291,8 @@ section h2::after {
     margin-bottom: 0.8rem;
 }
 
-.education-card p {
-    font-size: 1rem;
+.education-card p { /* Padrão de texto para o parágrafo da educação */
+    font-size: 1rem; /* Padronizado para 1rem */
     color: #555;
 }
 
@@ -334,7 +331,7 @@ section h2::after {
 }
 
 .experience-card p {
-    font-size: 1rem;
+    font-size: 1rem; /* Padronizado para 1rem */
     color: #555;
 }
 
