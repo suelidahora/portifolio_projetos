@@ -146,10 +146,6 @@ header nav {
 
 .welcome-text {
     flex-grow: 1;
-    /* Ajustes para o texto interno */
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Centraliza os elementos filhos (h1, h2, p, buttons) */
 }
 
 .welcome-text h1 {
@@ -188,13 +184,13 @@ header nav {
     font-size: 1rem; /* Padronizado para 1rem */
     margin-bottom: 1.5rem;
     color: var(--text-color);
-    text-align: center; /* Centraliza o parágrafo */
+    text-align: left; /* Garante alinhamento à esquerda */
 }
 
 .cta-buttons {
     margin-top: 2rem;
     display: flex;
-    justify-content: center; /* Centraliza os botões */
+    justify-content: flex-start;
     gap: 1rem;
     flex-wrap: wrap;
 }
