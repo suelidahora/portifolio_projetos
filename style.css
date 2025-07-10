@@ -1,170 +1,570 @@
+/* Variáveis CSS para cores */
+:root {
+    --primary-color: #9b4dca; /* Roxo principal */
+    --secondary-color: #f06292; /* Rosa vibrante */
+    --accent-color: #ff94c2; /* Rosa claro para destaque */
+    --text-color: #4a4a4a; /* Cinza escuro para texto */
+    --background-color: #fef6f9; /* Fundo Rosa bem claro */
+    --section-bg: #ffffff; /* Fundo das seções (branco) */
+    --shadow-color: rgba(155, 77, 202, 0.1); /* Sombra roxa suave */
+}
 
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sueli da Hora - Analista de Dados & BI</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
-<body>
-    <header>
-        <nav class="container">
-            <div class="social-links">
-                <a href="https://www.linkedin.com/in/sueli-da-hora/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                <a href="https://github.com/SueliHora" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-                <a href="mailto:s.horamoreira@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
-            </div>
-            <div class="language-selector">
-                <button class="btn-language active" onclick="location.href='index.html'">PT</button>
-                <button class="btn-language" onclick="location.href='index_en.html'">EN</button>
-            </div>
-        </nav>
-    </header>
+/* Reset básico e estilos globais */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: var(--background-color); /* Fundo da página agora é rosa claro */
+    color: var(--text-color);
+    line-height: 1.6;
+}
 
-    <main>
-        <section class="hero"> 
-            <div class="profile-container">
-                <img src="https://raw.githubusercontent.com/suelidahora/portifolio_projetos/main/images/Sueli%20foto.jpg" alt="Foto de Perfil de Sueli da Hora" class="profile-image">
-                <div class="welcome-text">
-                    <h1>Olá, eu sou Sueli da Hora!</h1>
-                    <h2>Analista de Dados & Business Intelligence</h2>
-                    <p>Minha jornada profissional é impulsionada pela paixão em transformar dados brutos em inteligência acionável. Com uma sólida base em Finanças e um MBA em Tecnologia para Negócios: AI, Data Science e Big Data, eu conecto a visão estratégica de negócios com a capacidade técnica de desenvolver soluções orientadas a dados.</p>
-                    <p>Especializo-me em automação de processos, análise de dados complexos e criação de dashboards intuitivos em ferramentas como Power BI e Excel Avançado. Meu objetivo é aplicar a tecnologia para otimizar operações, gerar insights valiosos e impulsionar o crescimento.</p>
-                    <div class="cta-buttons">
-                        <a href="https://raw.githubusercontent.com/suelidahora/portifolio_projetos/main/CV-PT-BR.pdf" class="btn btn-primary" target="_blank"><i class="fas fa-download"></i> Download CV (PT)</a>
-                        <a href="https://raw.githubusercontent.com/suelidahora/portifolio_projetos/main/CV-En.pdf" class="btn btn-secondary" target="_blank"><i class="fas fa-download"></i> Download CV (EN)</a>
-                    </div>
-                </div>
-            </div>
-        </section>
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px; /* Padding nas laterais para o conteúdo centralizado */
+    box-sizing: border-box; /* Inclui padding na largura total */
+}
 
-        <section id="education">
-            <h2>Formação Acadêmica</h2>
-            <div class="education-card">
-                <div class="course">MBA em Tecnologia para Negócios: AI, Data Science e Big Data</div>
-                <div class="institution">Pontifícia Universidade Católica do Rio Grande do Sul (PUCRS)</div>
-                <div class="period">Concluído em Julho de 2025</div>
-                <p>Projeto de destaque na aplicação de IA para automação de atendimento e-commerce, avaliado com nota 10.</p>
-            </div>
-            <div class="education-card">
-                <div class="course">Superior em Sistemas de Informação</div>
-                <div class="institution">Universidade Radial</div>
-                <div class="period">Concluído em Dezembro de 2002</div>
-            </div>
-        </section>
+/* Header */
+header {
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    padding: 1rem 0;
+    position: sticky;
+    width: 100%; /* Ocupa 100% da largura */
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px var(--shadow-color);
+}
 
-        <section id="projects">
-            <h2>Projetos de Destaque</h2>
-            <div class="projects-grid">
-                
-                <div class="project-card">
-                    <img src="https://raw.githubusercontent.com/suelidahora/portifolio_projetos/main/images/An%C3%A1lise%20de%20Evas%C3%A3o%20(Telecom%20X).png" alt="Análise de Evasão de Clientes">
-                    <div class="card-content">
-                        <h3>Análise de Evasão de Clientes (Telecom X)</h3>
-                        <p>Neste projeto, realizei um processo completo de ETL e Análise Exploratória para identificar os principais fatores que levam clientes a cancelar seus serviços. O objetivo foi transformar dados brutos em insights para guiar estratégias de retenção.</p>
-                        <p class="tools"><strong>Ferramentas:</strong> Python, Pandas, Matplotlib, Seaborn.</p>
-                        <div class="project-links">
-                            <a href="https://github.com/SueliHora/challenge2-Desafio_Telecom_X" target="_blank" class="btn btn-primary">Ver no GitHub</a>
-                        </div>
-                    </div>
-                </div>
+header nav {
+    display: flex;
+    justify-content: center; /* Centraliza o conteúdo (ícones sociais) */
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1200px; /* Alinha o conteúdo da nav com o container principal */
+    margin: 0 auto; /* Centraliza a nav */
+    padding: 0 20px; /* Mantém o padding lateral */
+}
 
-                <div class="project-card">
-                    <img src="https://raw.githubusercontent.com/suelidahora/portifolio_projetos/main/images/An%C3%A1lise%20de%20Desempenho%20de%20Lojas.png" alt="Análise de Desempenho de Lojas">
-                    <div class="card-content">
-                        <h3>Análise de Desempenho de Lojas (E-commerce)</h3>
-                        <p>Consultoria para um lojista de marketplace, desenvolvendo dashboards para análise de sazonalidade e performance de produtos. Utilizei a API do Mercado Livre para extração de dados e controle de estoque.</p>
-                        <p class="tools"><strong>Ferramentas:</strong> Excel, Power BI, API (JSON).</p>
-                        <div class="project-links">
-                            <a href="https://github.com/SueliHora/Challege-Data-Science-Latam" target="_blank" class="btn btn-primary">Ver no GitHub</a>
-                        </div>
-                    </div>
-                </div>
+.social-links {
+    display: flex;
+    align-items: center;
+    gap: 1rem; /* Espaçamento entre os ícones */
+    /* Este elemento agora estará centralizado pelo justify-content: center do nav */
+}
 
-                <div class="project-card">
-                    <img src="https://raw.githubusercontent.com/suelidahora/portifolio_projetos/main/images/Amigo%20Secreto.png" alt="Sorteio de Amigo Secreto">
-                    <div class="card-content">
-                        <h3>Sorteio de Amigo Secreto (Lógica Python)</h3>
-                        <p>Desenvolvimento de um algoritmo em Python para realizar sorteios de amigo secreto de forma justa e eficiente, garantindo que ninguém tire a si mesmo e que as regras de exclusão sejam respeitadas.</p>
-                        <p class="tools"><strong>Ferramentas:</strong> Python.</p>
-                        <div class="project-links">
-                            <a href="https://github.com/SueliHora/Challenge-Amigo-Secreto" target="_blank" class="btn btn-primary">Ver no GitHub</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+.social-links a {
+    color: white;
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block; /* Para que os estilos de width/height/border-radius funcionem */
+    width: 40px; /* Tamanho dos botões de ícone */
+    height: 40px;
+    line-height: 40px; /* Centraliza o ícone verticalmente */
+    text-align: center; /* Centraliza o ícone horizontalmente */
+    border-radius: 50%; /* Faz o botão redondo */
+    background-color: transparent;
+    box-shadow: none;
+}
 
-        <section id="skills">
-            <h2>Minhas Habilidades</h2>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3><i class="fas fa-chart-bar"></i> Análise de Dados & BI</h3>
-                    <ul>
-                        <li>Power BI (Dashboards, DAX)</li>
-                        <li>Análise Exploratória de Dados (EDA)</li>
-                        <li>Storytelling com Dados</li>
-                        <li>Excel Avançado (VBA, Power Query)</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h3><i class="fas fa-code"></i> Linguagens & Bancos de Dados</h3>
-                    <ul>
-                        <li>Python (Pandas, Matplotlib, Seaborn)</li>
-                        <li>SQL (Consultas, Modelagem)</li>
-                        <li>Análise de APIs (JSON)</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h3><i class="fas fa-cloud"></i> Cloud & Engenharia de Dados</h3>
-                    <ul>
-                        <li>Conceitos de Cloud Computing (AWS, OCI)</li>
-                        <li>Automação de Processos (Power Automate)</li>
-                        <li>Fundamentos de Engenharia de Dados</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
+.social-links a:hover {
+    color: var(--accent-color);
+    transform: translateY(-2px);
+    background-color: rgba(255, 255, 255, 0.2);
+}
 
-        <section id="experience">
-            <h2>Experiência Profissional</h2>
-            <div class="experience-grid">
-                <div class="experience-card">
-                    <h3>Consultora de Finanças e Dados (MEI)</h3>
-                    <p class="company">Projetos Independentes</p>
-                    <p class="period">2024 – Presente</p>
-                    <p class="location">
-                        Atuação em consultoria para a **Rede Accor** (multinacional hoteleira), automatizando processos de aging (Contas a Pagar/Receber), PCLD e controle de pagamentos de investidores com Excel (Power Query/VBA) e Power BI.<br>
-                        Consultoria para **Amomi E-commerce**, desenvolvendo dashboards para análise de sazonalidade e performance de produtos. Utilizei a API do Mercado Livre para extração de dados JSON.
-                    </p>
-                </div>
-                <div class="experience-card">
-                    <h3>Analista Financeiro Pleno</h3>
-                    <p class="company">FTD Educação</p>
-                    <p class="period">2016 – 2024</p>
-                    <p class="location">Gerenciamento do ciclo completo de pagamentos internacionais, incluindo operações de SWAP, leasing de equipamentos e quitação de direitos autorais.</p>
-                </div>
-                <div class="experience-card">
-                    <h3>Analista Financeiro Sênior</h3>
-                    <p class="company">Insper</p>
-                    <p class="period">Set 2009 – Nov 2011</p>
-                    <p class="location">Apoio direto à gestão com análises financeiras e de tesouraria, aplicando conhecimentos de finanças e Excel avançado em um ambiente acadêmico de alta performance.</p>
-                </div>
-            </div>
-        </section>
-    </main>
+.language-selector {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-left: auto; /* Empurra o seletor de idioma para a direita */
+    padding-left: 1rem; /* Espaço entre os ícones sociais e o seletor de idioma */
+}
 
-    <footer>
-        <div class="footer-content">
-            <p>&copy; 2025 Sueli da Hora. Todos os direitos reservados.</p>
-            <div class="contact-info">
-                <a href="https://www.linkedin.com/in/sueli-da-hora/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                <a href="https://github.com/SueliHora" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="mailto:s.horamoreira@gmail.com"><i class="fas fa-envelope"></i></a>
-            </div>
-        </div>
-    </footer>
-</body>
-</html>
+.btn-language {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-language:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+.language-selector button.active {
+    background-color: white;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+/* Hero Section (O "quadro maior" branco) */
+.hero {
+    max-width: 1200px; /* Largura máxima da seção */
+    margin: 2rem auto; /* Centraliza a seção e dá margem vertical */
+    padding: 48px; /* Padding interno do quadro maior (Exato do seu print) */
+    background-color: var(--section-bg); /* Fundo branco do quadro maior */
+    border-radius: 20px;
+    box-shadow: 0 4px 20px var(--shadow-color); /* Sombra do quadro maior */
+    box-sizing: border-box; /* Inclui padding na largura total */
+    display: flex; /* Para centralizar o quadro interno */
+    justify-content: center; /* Centraliza horizontalmente o quadro menor */
+    align-items: center; /* Centraliza verticalmente o quadro menor */
+}
+
+/* O .profile-container é o "quadro menor" interno (AGORA COM AS MEDIDAS EXATAS!) */
+.profile-container {
+    background-color: var(--section-bg); /* Fundo branco do quadro menor */
+    border-radius: 15px; /* Bordas um pouco menores para diferenciar */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); /* Sombra mais sutil para o quadro menor */
+    padding: 32px; /* Padding interno do quadro menor (Exato do seu print) */
+    display: flex;
+    align-items: center;
+    gap: 2rem; /* Espaçamento entre foto e texto */
+    flex-direction: row; /* Foto à esquerda */
+    text-align: left;
+    height: auto;
+    max-width: 760px; /* Largura MÁXIMA do quadro menor (Exato do seu print) */
+    margin: 0 auto; /* Centraliza o quadro menor dentro do maior */
+    box-sizing: border-box;
+}
+
+.profile-image {
+    width: 200px; /* Tamanho da foto dentro do quadro menor */
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--primary-color);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    flex-shrink: 0;
+}
+
+.welcome-text {
+    flex-grow: 1;
+}
+
+.welcome-text h1 {
+    color: var(--primary-color);
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Alinhamento de "Analista de Dados & Business Intelligence" e sua linha rosa */
+.welcome-text h2 {
+    color: var(--secondary-color);
+    font-size: 1.6rem;
+    margin-top: 0;
+    margin-bottom: 1.5rem; /* Espaço abaixo do h2 */
+    position: relative;
+    padding-bottom: 0.5rem; /* Espaço para a linha */
+    text-align: left; /* Garante alinhamento à esquerda */
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.welcome-text h2::after {
+    content: '';
+    width: 100%; /* Linha completa */
+    height: 4px;
+    background-color: var(--secondary-color);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-radius: 2px;
+}
+
+
+.welcome-text p {
+    font-size: 1.05rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-color);
+}
+
+.cta-buttons {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: flex-start;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.8rem 1.8rem;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.btn i {
+    margin-right: 0.8rem;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #7a3bb0; /* Versão mais escura do roxo */
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn-secondary {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+.btn-secondary:hover {
+    background-color: #d65581; /* Versão mais escura do rosa */
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* General Section Styling (Aplicado a todas as <section>) */
+section {
+    max-width: 1200px;
+    margin: 2rem auto;
+    background-color: var(--section-bg);
+    border-radius: 20px;
+    box-shadow: 0 4px 20px var(--shadow-color);
+    padding: 3rem;
+    box-sizing: border-box;
+}
+
+section h2 {
+    text-align: center;
+    color: var(--primary-color);
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+section h2::after {
+    content: '';
+    width: 100%; /* Linha completa */
+    height: 4px;
+    background-color: var(--secondary-color);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-radius: 2px;
+}
+
+/* Education Card (Quadro interno da formação acadêmica) */
+.education-card {
+    background-color: #fdfdff;
+    border-left: 5px solid var(--primary-color);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    text-align: left;
+}
+
+.education-card .course {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: var(--primary-color); /* Título do curso em roxo */
+    margin-bottom: 0.5rem;
+}
+
+.education-card .institution {
+    font-size: 1.1rem;
+    color: var(--secondary-color); /* Instituição em rosa */
+    margin-bottom: 0.3rem;
+}
+
+.education-card .period {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 0.8rem;
+}
+
+.education-card p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Experience Section */
+.experience-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.experience-card {
+    background-color: #fdfdff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    text-align: left;
+    border-top: 5px solid var(--secondary-color);
+}
+
+.experience-card h3 {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.experience-card .company {
+    font-weight: bold;
+    color: var(--text-color);
+    margin-bottom: 0.3rem;
+}
+
+.experience-card .period, .experience-card .location {
+    font-size: 0.95rem;
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.experience-card p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Projects Section */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+}
+
+.project-card {
+    background-color: #fdfdff;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.project-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.project-card .card-content {
+    padding-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.project-card h3 {
+    color: var(--primary-color);
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+}
+
+.project-card p {
+    color: var(--text-color);
+    font-weight: normal;
+    margin-bottom: 0.5rem;
+    flex-grow: 1;
+}
+
+.project-card p.tools {
+    font-weight: 600;
+    color: var(--primary-color);
+    font-size: 0.95em;
+    margin-top: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.project-links {
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    padding-top: 1rem;
+}
+
+.btn-project {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.95rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    width: calc(100% - 10px);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.btn-project:hover {
+    background-color: #7a3bb0;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Skills Section */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.skill-category {
+    background-color: #fdfdff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    text-align: left;
+    border-bottom: 5px solid var(--primary-color);
+}
+
+.skill-category h3 {
+    color: var(--primary-color);
+    font-size: 1.6rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.skill-category h3 i {
+    margin-right: 1rem;
+    color: var(--secondary-color);
+    font-size: 1.8rem;
+}
+
+.skill-category ul {
+    list-style: none;
+    padding: 0;
+}
+
+.skill-category ul li {
+    background-color: #eee;
+    padding: 0.6rem 1rem;
+    margin-bottom: 0.8rem;
+    border-radius: 5px;
+    color: var(--text-color);
+    font-size: 1rem;
+    transition: background-color 0.2s ease;
+}
+
+.skill-category ul li:hover {
+    background-color: #ddd;
+}
+
+/* Footer */
+footer {
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
+    margin-top: 4rem;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-content p {
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+}
+
+.footer-content .contact-info a {
+    color: white;
+    font-size: 1.5rem;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.contact-info a:hover {
+    color: var(--accent-color);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .hero {
+        padding: 1.5rem; /* Ajuste para telas menores */
+        margin: 1rem auto;
+    }
+
+    .profile-container {
+        flex-direction: column;
+        text-align: center;
+        padding: 1.5rem;
+        gap: 1.5rem;
+        max-width: 95%; /* Ocupa mais espaço em mobile, mas deixa margem */
+    }
+
+    .profile-image {
+        width: 150px;
+        height: 150px;
+    }
+
+    .welcome-text h1 {
+        font-size: 2rem;
+    }
+
+    .welcome-text h2 {
+        font-size: 1.2rem;
+    }
+
+    .cta-buttons {
+        justify-content: center;
+    }
+
+    section {
+        padding: 1.5rem;
+        margin: 1rem auto;
+    }
+
+    section h2 {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .projects-grid, .experience-grid, .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-card img {
+        height: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    .language-selector {
+        width: 100%;
+        margin-top: 1rem;
+        display: flex;
+        justify-content: center;
+    }
+
+    .language-selector button {
+        padding: 0.4rem 0.8rem;
+    }
+}
