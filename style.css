@@ -1,3 +1,26 @@
+Sueli, eu vejo a image_4b8dc4.png e sinto muito mesmo. A bagunça na primeira parte, especialmente o layout do texto e dos botões, é clara. Mil desculpas.
+
+Eu entendo que isso é enlouquecedor, mas vamos ajustar isso agora. A primeira parte, a seção Hero, é a mais delicada.
+
+Ajuste da Seção Hero (Layout e Proporções Internas)
+Vamos refinar as regras de CSS para os elementos dentro da seção Hero (.profile-container, .welcome-text, .cta-buttons) para garantir que o texto se comporte bem e os botões fiquem no lugar, mantendo as proporções que havíamos conseguido.
+
+Instruções (para o style.css - SUBSTITUA TODO O CONTEÚDO NOVAMENTE):
+
+Acesse seu arquivo style.css no GitHub.
+
+Clique no ícone de lápis ✏️ para editar.
+
+Selecione TODO o conteúdo e APAGUE.
+
+Cole o código CSS ABAIXO na ÍNTEGRA.
+
+Adicione a mensagem de commit (ex: final: Ajuste fino do layout interno da seção Hero.) e salve.
+
+CÓDIGO PARA COPIAR E COLAR (para style.css - COPIE TUDO DO INÍCIO AO FIM):
+
+CSS
+
 /* Variáveis CSS para cores */
 :root {
     --primary-color: #9b4dca; /* Roxo principal */
@@ -11,7 +34,7 @@
 
 /* Reset básico e estilos globais */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* FONTE CORRIGIDA! */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* FONTE CORRIGIDA AGORA! */
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -103,35 +126,39 @@ header nav {
     font-weight: bold;
 }
 
-/* Hero Section (Um único quadro branco grande) */
-.hero { /* Aqui era section.hero */
-    max-width: 1200px; /* Largura máxima do quadro */
-    margin: 2rem auto; /* Centraliza e dá margem vertical */
-    padding: 3rem; /* Padding interno */
-    background-color: var(--section-bg); /* Fundo branco */
+/* Hero Section (O "quadro maior" branco) */
+.hero {
+    max-width: 1200px; /* Largura máxima da seção */
+    margin: 2rem auto; /* Centraliza a seção e dá margem vertical */
+    padding: 48px; /* Padding interno do quadro maior (Exato do seu print) */
+    background-color: var(--section-bg); /* Fundo branco do quadro maior */
     border-radius: 20px;
-    box-shadow: 0 4px 20px var(--shadow-color); /* Sombra */
+    box-shadow: 0 4px 20px var(--shadow-color); /* Sombra do quadro maior */
     box-sizing: border-box; /* Inclui padding na largura total */
-    display: flex; /* Para layout de foto e texto */
-    justify-content: center; /* Centraliza o conteúdo (foto+texto) */
-    align-items: center; /* Alinha verticalmente */
+    display: flex; /* Para centralizar o quadro interno */
+    justify-content: center; /* Centraliza horizontalmente o quadro menor */
+    align-items: center; /* Alinha verticalmente o quadro menor */
 }
 
-.profile-container { /* Renomeado para profile-content-simplified no HTML, mas aqui é como estava na versão estável */
+/* O .profile-container é o "quadro menor" interno (AGORA COM AS MEDIDAS EXATAS!) */
+.profile-container {
+    background-color: var(--section-bg); /* Fundo branco do quadro menor */
+    border-radius: 15px; /* Bordas um pouco menores para diferenciar */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); /* Sombra mais sutil para o quadro menor */
+    padding: 32px; /* Padding interno do quadro menor (Exato do seu print) */
     display: flex;
     align-items: center;
     gap: 2rem; /* Espaçamento entre foto e texto */
     flex-direction: row; /* Foto à esquerda */
     text-align: left;
     height: auto;
-    max-width: 900px; /* Largura máxima do conteúdo dentro do quadro simplificado */
-    width: 100%;
+    max-width: 760px; /* Largura MÁXIMA do quadro menor (Exato do seu print) */
+    margin: 0 auto; /* Centraliza o quadro menor dentro do maior */
     box-sizing: border-box;
-    padding: 0; /* Remover padding extra se existir */
 }
 
 .profile-image {
-    width: 200px; /* Tamanho da foto */
+    width: 200px; /* Tamanho da foto dentro do quadro menor */
     height: 200px;
     border-radius: 50%;
     object-fit: cover;
@@ -140,27 +167,31 @@ header nav {
     flex-shrink: 0;
 }
 
-.welcome-text { /* Renomeado para welcome-text-simplified no HTML */
+.welcome-text {
     flex-grow: 1;
+    /* Ajustes para o texto interno */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza os elementos filhos (h1, h2, p, buttons) */
 }
 
 .welcome-text h1 {
     color: var(--primary-color);
     font-size: 2.5rem;
     margin-bottom: 0.5rem;
-    text-align: center; /* Havia sido centralizado aqui, será ajustado depois */
+    text-align: center; /* Centraliza o H1 */
 }
 
-/* Linha rosa completa para o h2 da Hero Section */
+/* Alinhamento de "Analista de Dados & Business Intelligence" e sua linha rosa */
 .welcome-text h2 {
     color: var(--secondary-color);
-    font-size: 1.6rem;
+    font-size: 1.6rem; /* Tamanho ajustado para não quebrar linha */
     margin-top: 0;
     margin-bottom: 1.5rem; /* Espaço abaixo do h2 */
     position: relative;
     padding-bottom: 0.5rem; /* Espaço para a linha */
-    text-align: center; /* Havia sido centralizado aqui, será ajustado depois */
-    margin-left: auto;
+    text-align: center; /* Centraliza o H2 */
+    margin-left: auto; /* Centraliza o H2 se ele for mais estreito */
     margin-right: auto;
     width: fit-content; /* Faz o H2 ocupar apenas o espaço do texto */
 }
@@ -180,13 +211,13 @@ header nav {
     font-size: 1rem; /* Padronizado para 1rem */
     margin-bottom: 1.5rem;
     color: var(--text-color);
-    text-align: left; /* Garante alinhamento à esquerda */
+    text-align: center; /* Centraliza o parágrafo */
 }
 
 .cta-buttons {
     margin-top: 2rem;
     display: flex;
-    justify-content: flex-start;
+    justify-content: center; /* Centraliza os botões */
     gap: 1rem;
     flex-wrap: wrap;
 }
@@ -229,7 +260,7 @@ header nav {
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* General Section Styling (Aplicado a todas as <section> que não são a Hero simplificada) */
+/* General Section Styling (Aplicado a todas as <section>) */
 section {
     max-width: 1200px;
     margin: 2rem auto;
