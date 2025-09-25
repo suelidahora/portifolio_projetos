@@ -547,3 +547,36 @@ footer {
 .btn-secondary {
     display: none !important;
 }
+/* FORMATAÇÃO PARA O NOVO TEXTO */
+.skills-highlight {
+    background-color: #f8f9ff;
+    border-left: 4px solid var(--primary-color);
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+    border-radius: 8px;
+    text-align: left;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.skills-highlight p {
+    margin-bottom: 0.8rem;
+    font-size: 1rem;
+    color: var(--text-color);
+    text-align: left !important;
+}
+
+.skills-highlight p:last-child {
+    margin-bottom: 0;
+}
+
+.skills-highlight strong {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+/* FORÇAR REMOÇÃO DOS BOTÕES */
+.cta-buttons {
+    display: none !important;
+}
