@@ -11,21 +11,21 @@
 
 /* Reset básico e estilos globais */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* FONTE CORRIGIDA AGORA! */
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: var(--background-color);
+    background-color: var(--background-color); /* Fundo da página agora é rosa claro */
     color: var(--text-color);
-    line-height: 1.6;
-    font-size: 1rem;
+    line-height: 1.6; /* Line-height padrão para o corpo do texto */
+    font-size: 1rem; /* Tamanho padrão da fonte */
 }
 
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
-    box-sizing: border-box;
+    padding: 0 20px; /* Padding nas laterais para o conteúdo centralizado */
+    box-sizing: border-box; /* Inclui padding na largura total */
 }
 
 /* Header */
@@ -34,7 +34,7 @@ header {
     color: white;
     padding: 1rem 0;
     position: sticky;
-    width: 100%;
+    width: 100%; /* Ocupa 100% da largura */
     top: 0;
     z-index: 1000;
     box-shadow: 0 2px 10px var(--shadow-color);
@@ -42,18 +42,18 @@ header {
 
 header nav {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Ícones sociais à esquerda, idiomas à direita */
     align-items: center;
     flex-wrap: wrap;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+    max-width: 1200px; /* Alinha o conteúdo da nav com o container principal */
+    margin: 0 auto; /* Centraliza a nav */
+    padding: 0 20px; /* Mantém o padding lateral */
 }
 
 .social-links {
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: 1rem; /* Espaçamento entre os ícones */
 }
 
 .social-links a {
@@ -61,12 +61,12 @@ header nav {
     font-size: 1.5rem;
     transition: all 0.3s ease;
     text-decoration: none;
-    display: inline-block;
-    width: 40px;
+    display: inline-block; /* Para que os estilos de width/height/border-radius funcionem */
+    width: 40px; /* Tamanho dos botões de ícone */
     height: 40px;
-    line-height: 40px;
-    text-align: center;
-    border-radius: 50%;
+    line-height: 40px; /* Centraliza o ícone verticalmente */
+    text-align: center; /* Centraliza o ícone horizontalmente */
+    border-radius: 50%; /* Faz o botão redondo */
     background-color: transparent;
     box-shadow: none;
 }
@@ -103,39 +103,40 @@ header nav {
     font-weight: bold;
 }
 
-/* Hero Section */
+/* Hero Section (O "quadro maior" branco) */
 .hero {
-    max-width: 1200px;
-    margin: 2rem auto;
-    padding: 48px;
-    background-color: var(--section-bg);
-    border-radius: 20px;
-    box-shadow: 0 4px 20px var(--shadow-color);
-    box-sizing: border-box;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    max-width: 1200px; /* Largura máxima da seção */
+    margin: 2rem auto; /* Centraliza a seção e dá margem vertical */
+    padding: 48px; /* Padding interno do quadro maior (Exato do seu print) */
+    background-color: var(--section-bg); /* Fundo branco do quadro maior */
+    border-radius: 40px;
+    box-shadow: 0 4px 20px var(--shadow-color); /* Sombra do quadro maior */
+    box-sizing: border-box; /* Inclui padding na largura total */
+    display: flex; /* Para centralizar o quadro interno */
+    justify-content: center; /* Centraliza horizontalmente o quadro menor */
+    align-items: center; /* Alinha verticalmente o quadro menor */
 }
 
+/* O .profile-container é o "quadro menor" interno (AGORA COM AS MEDIDAS EXATAS!) */
 .profile-container {
-    background-color: var(--section-bg);
-    border-radius: 15px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-    padding: 32px;
+    background-color: var(--section-bg); /* Fundo branco do quadro menor */
+    border-radius: 15px; /* Bordas um pouco menores para diferenciar */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); /* Sombra mais sutil para o quadro menor */
+    padding: 32px; /* Padding interno do quadro menor (Exato do seu print) */
     display: flex;
     align-items: center;
-    gap: 2rem;
-    flex-direction: row;
+    gap: 2rem; /* Espaçamento entre foto e texto */
+    flex-direction: row; /* Foto à esquerda */
     text-align: left;
     height: auto;
-    max-width: 760px;
-    margin: 0 auto;
+    max-width: 760px; /* Largura MÁXIMA do quadro menor (Exato do seu print) */
+    margin: 0 auto; /* Centraliza o quadro menor dentro do maior */
     box-sizing: border-box;
 }
 
 .profile-image {
-    width: 200px;
-    height: 200px;
+    width: 150px; /* Tamanho da foto dentro do quadro menor */
+    height: 150px;
     border-radius: 50%;
     object-fit: cover;
     border: 4px solid var(--primary-color);
@@ -144,32 +145,33 @@ header nav {
 }
 
 .welcome-text {
-    flex-grow: 1;
+    flex-grow: 106;
 }
 
 .welcome-text h1 {
     color: var(--primary-color);
     font-size: 2.5rem;
-    margin-bottom: 0.5rem;
-    text-align: center;
+    margin-bottom: 1.5rem;
+    text-align: center; /* Centraliza o H1 */
 }
 
+/* Alinhamento de "Analista de Dados & Business Intelligence" e sua linha rosa */
 .welcome-text h2 {
     color: var(--secondary-color);
-    font-size: 1.6rem;
+    font-size: 1.6rem; /* Tamanho ajustado para não quebrar linha */
     margin-top: 0;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.5rem; /* Espaço abaixo do h2 */
     position: relative;
-    padding-bottom: 0.5rem;
-    text-align: center;
-    margin-left: auto;
+    padding-bottom: 0.5rem; /* Espaço para a linha */
+    text-align: center; /* Centraliza o H2 */
+    margin-left: auto; /* Centraliza o H2 se ele for mais estreito */
     margin-right: auto;
-    width: fit-content;
+    width: fit-content; /* Faz o H2 ocupar apenas o espaço do texto */
 }
 
 .welcome-text h2::after {
     content: '';
-    width: 100%;
+    width: 100%; /* Linha completa */
     height: 4px;
     background-color: var(--secondary-color);
     position: absolute;
@@ -179,10 +181,10 @@ header nav {
 }
 
 .welcome-text p {
-    font-size: 1rem;
+    font-size: 1rem; /* Padronizado para 1rem */
     margin-bottom: 1.5rem;
     color: var(--text-color);
-    text-align: left;
+    text-align: left; /* Garante alinhamento à esquerda */
 }
 
 .cta-buttons {
@@ -215,7 +217,7 @@ header nav {
 }
 
 .btn-primary:hover {
-    background-color: #7a3bb0;
+    background-color: #7a3bb0; /* Versão mais escura do roxo */
     transform: translateY(-3px);
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
@@ -226,12 +228,12 @@ header nav {
 }
 
 .btn-secondary:hover {
-    background-color: #d65581;
+    background-color: #d65581; /* Versão mais escura do rosa */
     transform: translateY(-3px);
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* General Section Styling */
+/* General Section Styling (Aplicado a todas as <section>) */
 section {
     max-width: 1200px;
     margin: 2rem auto;
@@ -253,7 +255,7 @@ section h2 {
 
 section h2::after {
     content: '';
-    width: 100%;
+    #width: 40%; /* Linha completa */
     height: 4px;
     background-color: var(--secondary-color);
     position: absolute;
@@ -262,7 +264,7 @@ section h2::after {
     border-radius: 2px;
 }
 
-/* Education Card */
+/* Education Card (Quadro interno da formação acadêmica) */
 .education-card {
     background-color: #fdfdff;
     border-left: 5px solid var(--primary-color);
@@ -276,15 +278,15 @@ section h2::after {
 .education-card .course {
     font-size: 1.4rem;
     font-weight: bold;
-    color: var(--primary-color);
+    color: var(--primary-color); /* Título do curso em roxo */
     margin-bottom: 0.5rem;
 }
 
 .education-card .institution {
     font-size: 1.1rem;
-    color: var(--secondary-color);
+    color: var(--secondary-color); /* Instituição em rosa */
     margin-bottom: 0.3rem;
-    font-weight: bold;
+    font-weight: bold; /* ADICIONADO */
 }
 
 .education-card .period {
@@ -293,8 +295,8 @@ section h2::after {
     margin-bottom: 0.8rem;
 }
 
-.education-card p {
-    font-size: 1rem;
+.education-card p { /* Padrão de texto para o parágrafo da educação */
+    font-size: 1rem; /* Padronizado para 1rem */
     color: #555;
 }
 
@@ -311,7 +313,8 @@ section h2::after {
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
     text-align: left;
-    border-top: 5px solid var(--secondary-color);
+    # linha rosa border-top: 5px solid var(--secondary-color);
+    border-bottom: 5px solid var(--primary-color); /* ← LINHA ALTERADA */
 }
 
 .experience-card h3 {
@@ -333,7 +336,7 @@ section h2::after {
 }
 
 .experience-card p {
-    font-size: 1rem;
+    font-size: 1rem; /* Padronizado para 1rem */
     color: #555;
 }
 
@@ -415,6 +418,7 @@ section h2::after {
     justify-content: center;
     align-items: center;
     margin: 0 auto;
+     
 }
 
 .btn-project:hover {
@@ -423,7 +427,7 @@ section h2::after {
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* Skills Section - AJUSTADO AQUI! */
+/* Skills Section */
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -436,8 +440,7 @@ section h2::after {
     border-radius: 12px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
     text-align: left;
-    border-bottom: 6px solid var(--primary-color); /* ← LINHA ROXA EMBAIXO */
-    border-top: none; /* ← SEM LINHA EM CIMA */
+    border-bottom: 5px solid var(--primary-color);
 }
 
 .skill-category h3 {
@@ -508,7 +511,7 @@ footer {
 /* Responsive Adjustments */
 @media (max-width: 768px) {
     .hero {
-        padding: 1.5rem;
+        padding: 1.5rem; /* Ajuste para telas menores */
         margin: 1rem auto;
     }
 
@@ -517,7 +520,7 @@ footer {
         text-align: center;
         padding: 1.5rem;
         gap: 1.5rem;
-        max-width: 95%;
+        max-width: 95%; /* Ocupa mais espaço em mobile, mas deixa margem */
     }
 
     .profile-image {
