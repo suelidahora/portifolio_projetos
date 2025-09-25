@@ -531,3 +531,19 @@ footer {
         font-size: 1.8rem;
     }
 }
+/* FORÇAR REMOÇÃO DOS BOTÕES DE DOWNLOAD */
+.cta-buttons {
+    display: none !important;
+}
+
+.btn {
+    display: none !important;
+}
+
+.btn-primary {
+    display: none !important;
+}
+
+.btn-secondary {
+    display: none !important;
+}
